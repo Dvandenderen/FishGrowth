@@ -1,0 +1,911 @@
+Name;SpecCode;SAU_functional_group;DemersPelag_fishbase;Func_group
+Albatrossia pectoralis;608435;NA;bathydemersal;Bathydemersal
+Alepocephalus bairdii;600230;Large Bathydemersals (>=90 cm);bathydemersal;Bathydemersal
+Alepocephalus rostratus;605071;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Allocareproctus jordani;624122;NA;bathydemersal;Bathydemersal
+Anoplopoma fimbria;600512;Large Bathydemersals (>=90 cm);bathydemersal;Bathydemersal
+Argentina silus;602700;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Bathypterois dubius;609133;NA;bathydemersal;Bathydemersal
+Careproctus zachirus;651484;NA;bathydemersal;Bathydemersal
+Cataetyx alleni;608177;NA;bathydemersal;Bathydemersal
+Chlorophthalmus agassizi;601808;NA;bathydemersal;Bathydemersal
+Coelorinchus labiatus;608456;NA;bathydemersal;Bathydemersal
+Coelorinchus mediterraneus;659766;NA;bathydemersal;Bathydemersal
+Coryphaenoides acrolepis;608467;NA;bathydemersal;Bathydemersal
+Coryphaenoides cinereus;608473;NA;bathydemersal;Bathydemersal
+Coryphaenoides guentheri;608176;NA;bathydemersal;Bathydemersal
+Dissostichus eleginoides;600467;Large Bathydemersals (>=90 cm);pelagic-oceanic;Bathydemersal
+Emmelichthys nitidus nitidus;600395;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Erilepis zonifer;604031;NA;bathydemersal;Bathydemersal
+Genypterus capensis;600485;Large Bathydemersals (>=90 cm);bathydemersal;Bathydemersal
+Halosauropsis macrochir;606955;NA;bathydemersal;Bathydemersal
+Helicolenus dactylopterus;600076;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Hyperoglyphe antarctica;600496;Large Bathydemersals (>=90 cm);benthopelagic;Bathydemersal
+Hyporthodus octofasciatus;607355;NA;bathydemersal;Bathydemersal
+Lepidopus caudatus;600645;Large Bathydemersals (>=90 cm);benthopelagic;Bathydemersal
+Lophius budegassa;605094;Large Bathydemersals (>=90 cm);bathydemersal;Bathydemersal
+Lophius piscatorius;600716;Large Bathydemersals (>=90 cm);bathydemersal;Bathydemersal
+Lycodes albolineatus;648210;NA;bathydemersal;Bathydemersal
+Malacocottus zonurus;611730;NA;bathydemersal;Bathydemersal
+Merluccius capensis;601828;Large Bathydemersals (>=90 cm);bathydemersal;Bathydemersal
+Merluccius gayi gayi;600324;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Merluccius gayi peruanus;614693;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Merluccius paradoxus;601826;NA;bathydemersal;Bathydemersal
+Polymixia yuri;652809;NA;bathydemersal;Bathydemersal
+Pontinus kuhlii;605007;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Sebastes aleutianus;603949;NA;bathydemersal;Bathydemersal
+Sebastes borealis;603954;NA;bathydemersal;Bathydemersal
+Sebastes levis;603976;NA;bathydemersal;Bathydemersal
+Sebastes proriger;603991;NA;bathydemersal;Bathydemersal
+Sebastes zacentrus;604008;NA;bathydemersal;Bathydemersal
+Sebastolobus altivelis;604010;NA;bathydemersal;Bathydemersal
+Serranus cabrilla;601353;Medium Bathydemersals (30 - 90 cm);demersal;Bathydemersal
+Trematomus lepidorhinus;607056;NA;bathydemersal;Bathydemersal
+Trematomus loennbergii;607057;NA;bathydemersal;Bathydemersal
+Trigla lyra;605038;Medium Bathydemersals (30 - 90 cm);bathydemersal;Bathydemersal
+Triglops scepticus;604149;NA;bathydemersal;Bathydemersal
+Urophycis cirrata;601884;NA;bathydemersal;Bathydemersal
+Antimora rostrata;602005;Medium Bathypelagics (30 - 90 cm);bathypelagic;Bathypelagic
+Bajacalifornia burragei;605200;NA;bathypelagic;Bathypelagic
+Benthosema suborbitale;606589;NA;bathypelagic;Bathypelagic
+Borostomias panamensis;605161;NA;bathypelagic;Bathypelagic
+Coryphaenoides mediterraneus;608175;NA;bathypelagic;Bathypelagic
+Coryphaenoides rupestris;600332;Medium Bathypelagics (30 - 90 cm);bathypelagic;Bathypelagic
+Electrona carlsbergi;606985;NA;bathypelagic;Bathypelagic
+Electrona risso;601714;NA;bathypelagic;Bathypelagic
+Hoplostethus atlanticus;600334;Medium Bathypelagics (30 - 90 cm);bathypelagic;Bathypelagic
+Lampris guttatus;601072;Large Bathypelagics (>=90 cm);bathypelagic;Bathypelagic
+Masturus lanceolatus;610207;NA;bathypelagic;Bathypelagic
+Maurolicus stehmanni;651603;NA;bathypelagic;Bathypelagic
+Metelectrona ventralis;607004;NA;bathypelagic;Bathypelagic
+Mora moro;601734;Medium Bathypelagics (30 - 90 cm);bathypelagic;Bathypelagic
+Myctophum nitidulum;604490;NA;bathypelagic;Bathypelagic
+Myctophum punctatum;601328;NA;bathypelagic;Bathypelagic
+Nannobrachium regale;602734;NA;bathypelagic;Bathypelagic
+Nezumia sclerorhynchus;603105;NA;bathypelagic;Bathypelagic
+Notolychnus valdiviae;604553;NA;bathypelagic;Bathypelagic
+Poromitra crassiceps;605117;NA;bathypelagic;Bathypelagic
+Sebastes mentella;600505;Medium Bathypelagics (30 - 90 cm);bathypelagic;Bathypelagic
+Stenobrachius leucopsarus;602737;NA;bathypelagic;Bathypelagic
+Stenobrachius nannochir;617406;NA;bathypelagic;Bathypelagic
+Tactostoma macropus;602713;NA;bathypelagic;Bathypelagic
+Trachipterus arcticus;603265;NA;bathypelagic;Bathypelagic
+Trachyrincus scabrus;604556;Medium Bathypelagics (30 - 90 cm);bathydemersal;Bathypelagic
+Acanthochaenus luetkenii;609046;NA;benthopelagic;Benthopelagic
+Argyrosomus inodorus;617270;NA;benthopelagic;Benthopelagic
+Argyrosomus japonicus;611979;NA;benthopelagic;Benthopelagic
+Argyrosomus regius;600418;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Argyrozona argyrozona;600443;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Arripis truttacea;614606;NA;benthopelagic;Benthopelagic
+Balistes capriscus;607327;Medium Benthopelagics (30 - 90 cm);reef-associated;Benthopelagic
+Beryx splendens;601320;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Caranx rhonchus;601899;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Centracanthus cirrus;601704;NA;benthopelagic;Benthopelagic
+Coelorinchus caelorhincus;601726;NA;benthopelagic;Benthopelagic
+Coregonus ussuriensis;612548;NA;benthopelagic;Benthopelagic
+Cyclopterus lumpus;600062;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Cynoscion guatucupa;652918;NA;benthopelagic;Benthopelagic
+Cynoscion othonopterus;614026;NA;benthopelagic;Benthopelagic
+Dentex dentex;600439;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Dentex gibbosus;604536;NA;benthopelagic;Benthopelagic
+Dentex macrophthalmus;600438;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Diplodus annularis;601752;Small Benthopelagics (<30 cm);benthopelagic;Benthopelagic
+Diplodus cervinus;602497;Medium Benthopelagics (30 - 90 cm);reef-associated;Benthopelagic
+Diplodus puntazzo;601749;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Diplodus vulgaris;601754;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Dissostichus mawsoni;607039;Large Benthopelagics (>=90 cm);pelagic-oceanic;Benthopelagic
+Dules auriga;612931;NA;benthopelagic;Benthopelagic
+Eleginops maclovinus;600466;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Etelis carbunculus;600087;NA;benthopelagic;Benthopelagic
+Forsterygion lapillum;612940;NA;benthopelagic;Benthopelagic
+Forsterygion varium;646992;NA;benthopelagic;Benthopelagic
+Gadus morhua;600069;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Gasterosteus aculeatus;602420;NA;benthopelagic;Benthopelagic
+Girella tricuspidata;608173;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Glaucosoma buergeri;610793;NA;benthopelagic;Benthopelagic
+Hoplostethus mediterraneus;604964;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Hymenocephalus italicus;601720;NA;benthopelagic;Benthopelagic
+Hypoptychus dybowskii;600488;Small Benthopelagics (<30 cm);benthopelagic;Benthopelagic
+Hyporthodus quernus;606371;NA;benthopelagic;Benthopelagic
+Kuhlia sandvicensis;605157;NA;benthopelagic;Benthopelagic
+Laemonema longipes;602014;Medium Benthopelagics (30 - 90 cm);bathydemersal;Benthopelagic
+Lithognathus mormyrus;600706;Medium Benthopelagics (30 - 90 cm);demersal;Benthopelagic
+Macruronus magellanicus;600329;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Merlangius merlangus;600029;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Merluccius australis;600322;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Merluccius hubbsi;600325;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Micromesistius poutassou;600031;Medium Benthopelagics (30 - 90 cm);bathypelagic;Benthopelagic
+Mugil cephalus;600785;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Nezumia aequalis;604997;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Nezumia bairdii;603104;NA;benthopelagic;Benthopelagic
+Nibea albiflora;613015;NA;benthopelagic;Benthopelagic
+Notothenia rossii;600468;Large Benthopelagics (>=90 cm);demersal;Benthopelagic
+Oblada melanura;600850;Small Benthopelagics (<30 cm);benthopelagic;Benthopelagic
+Oncorhynchus masou masou;600242;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Oncorhynchus mykiss;600239;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Ophthalmolepis lineolata;656982;NA;benthopelagic;Benthopelagic
+Pagellus acarne;600889;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Pagellus bogaraveo;600890;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Pagellus erythrinus;600893;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Pagrus pagrus;601756;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Pampus argenteus;600491;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Paralabrax clathratus;603335;NA;benthopelagic;Benthopelagic
+Parapristipoma trilineatum;604584;NA;benthopelagic;Benthopelagic
+Parastromateus niger;601947;Medium Benthopelagics (30 - 90 cm);reef-associated;Benthopelagic
+Peprilus triacanthus;600492;Small Benthopelagics (<30 cm);benthopelagic;Benthopelagic
+Phycis blennoides;601340;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Phycis phycis;601747;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Pomadasys striatus;607301;NA;benthopelagic;Benthopelagic
+Pristipomoides filamentosus;600201;NA;benthopelagic;Benthopelagic
+Pterogymnus laniarius;600448;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Rexea solandri;608490;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Salmo salar;600236;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Sarpa salpa;600204;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Scombrops boops;610360;NA;benthopelagic;Benthopelagic
+Scombrops gilberti;610369;NA;benthopelagic;Benthopelagic
+Sebastes norvegicus;600501;Large Benthopelagics (>=90 cm);pelagic-oceanic;Benthopelagic
+Seriola lalandi;600382;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Seriolella punctata;612922;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Spirinchus thaleichthys;602698;NA;benthopelagic;Benthopelagic
+Spondyliosoma cantharus;601356;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Theragra chalcogramma;600318;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Thyrsites atun;600489;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Trachurus declivis;600372;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Trachurus lathami;600369;Medium Benthopelagics (30 - 90 cm);reef-associated;Benthopelagic
+Trichiurus lepturus;601288;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Trichiurus nanhaiensis;658409;NA;benthopelagic;Benthopelagic
+Trisopterus luscus;601367;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Trisopterus minutus;600481;Medium Benthopelagics (30 - 90 cm);benthopelagic;Benthopelagic
+Ulvaria subbifurcata;603796;NA;benthopelagic;Benthopelagic
+Zeus faber;601370;Large Benthopelagics (>=90 cm);benthopelagic;Benthopelagic
+Acanthopagrus australis;608109;NA;demersal;Demersal
+Acanthopagrus butcheri;614601;NA;demersal;Demersal
+Acipenser brevirostrum;602590;NA;demersal;Demersal
+Acipenser medirostris;602592;NA;demersal;Demersal
+Acipenser schrenckii;606085;NA;demersal;Demersal
+Acipenser stellatus;602065;NA;demersal;Demersal
+Acipenser sturio;602066;NA;demersal;Demersal
+Acipenser transmontanus;602594;NA;demersal;Demersal
+Agonus cataphractus;600036;NA;demersal;Demersal
+Aldrichetta forsteri;612938;NA;demersal;Demersal
+Ambiserrula jugosa;652300;NA;demersal;Demersal
+Ammodytes americanus;603820;NA;demersal;Demersal
+Ammodytes dubius;603821;NA;demersal;Demersal
+Ammodytes hexapterus;603822;NA;benthopelagic;Demersal
+Ammodytes personatus;600487;Small Demersals (<30 cm);demersal;Demersal
+Anarhichas lupus;602501;Large Demersals (>=90 cm);demersal;Demersal
+Anguilla anguilla;600035;NA;demersal;Demersal
+Anguilla mossambica;601276;NA;demersal;Demersal
+Aphanius fasciatus;604834;NA;demersal;Demersal
+Archosargus probatocephalus;600441;Large Demersals (>=90 cm);reef-associated;Demersal
+Argyrops spinifer;600442;Medium Demersals (30 - 90 cm);demersal;Demersal
+Arius latiscutatus;604929;NA;demersal;Demersal
+Arius parkii;604946;NA;demersal;Demersal
+Artediellus camchaticus;623953;NA;demersal;Demersal
+Aspidophoroides monopterygius;604157;NA;demersal;Demersal
+Atherina boyeri;601696;Small Demersals (<30 cm);demersal;Demersal
+Atractoscion nobilis;603578;Large Demersals (>=90 cm);demersal;Demersal
+Atrobucca nibe;600941;Medium Demersals (30 - 90 cm);demersal;Demersal
+Bairdiella chrysoura;601165;NA;demersal;Demersal
+Bathyagonus nigripinnis;604161;NA;demersal;Demersal
+Bellator gymnostethus;614179;NA;demersal;Demersal
+Boleophthalmus pectinirostris;615864;NA;demersal;Demersal
+Boops boops;600203;Medium Demersals (30 - 90 cm);demersal;Demersal
+Boreogadus saida;600319;Medium Demersals (30 - 90 cm);demersal;Demersal
+Bovichtus diacanthus;659309;NA;demersal;Demersal
+Branchiostegus argentatus;604594;NA;demersal;Demersal
+Branchiostegus auratus;604595;NA;demersal;Demersal
+Branchiostegus japonicus;604593;NA;demersal;Demersal
+Callionymus belcheri;604697;NA;demersal;Demersal
+Capros aper;600054;Medium Demersals (30 - 90 cm);demersal;Demersal
+Carlarius heudelotii;604928;NA;demersal;Demersal
+Caulolatilus affinis;608276;NA;demersal;Demersal
+Caulolatilus microps;600987;NA;demersal;Demersal
+Cephalopholis taeniops;604936;NA;demersal;Demersal
+Cepola macrophthalma;600056;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chaenocephalus aceratus;600473;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chelidonichthys capensis;605504;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chelidonichthys cuculus;600044;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chelidonichthys kumu;600507;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chelidonichthys lucerna;601366;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chelidonichthys queketti;607948;NA;demersal;Demersal
+Chelon labrosus;602499;Medium Demersals (30 - 90 cm);demersal;Demersal
+Chrysoblephus laticeps;605529;NA;demersal;Demersal
+Clinocottus globiceps;604059;NA;demersal;Demersal
+Cnidoglanis macrocephalus;612092;NA;demersal;Demersal
+Conger conger;600301;Large Demersals (>=90 cm);demersal;Demersal
+Coregonus lavaretus;600232;Medium Demersals (30 - 90 cm);demersal;Demersal
+Coregonus maraena;648236;NA;demersal;Demersal
+Coregonus peled;604687;NA;demersal;Demersal
+Coregonus pidschian;602676;NA;demersal;Demersal
+Crystallogobius linearis;600060;NA;demersal;Demersal
+Cynoscion arenarius;601170;NA;demersal;Demersal
+Cynoscion leiarchus;601173;NA;demersal;Demersal
+Cynoscion nebulosus;600405;Large Demersals (>=90 cm);demersal;Demersal
+Cynoscion regalis;600406;Large Demersals (>=90 cm);demersal;Demersal
+Cynoscion stolzmanni;611002;NA;demersal;Demersal
+Dasycottus setiger;604085;NA;demersal;Demersal
+Deltentosteus quadrimaculatus;616282;NA;demersal;Demersal
+Dentex angolensis;600440;Medium Demersals (30 - 90 cm);demersal;Demersal
+Dentex congoensis;604641;Medium Demersals (30 - 90 cm);demersal;Demersal
+Dentex maroccanus;604538;Medium Demersals (30 - 90 cm);demersal;Demersal
+Dentex tumifrons;604710;NA;demersal;Demersal
+Dicentrarchus labrax;600063;Large Demersals (>=90 cm);demersal;Demersal
+Diplodus sargus sargus;601753;Medium Demersals (30 - 90 cm);demersal;Demersal
+Electrona antarctica;606984;NA;demersal;Demersal
+Epinephelus adscensionis;600014;NA;demersal;Demersal
+Epinephelus aeneus;600426;Large Demersals (>=90 cm);demersal;Demersal
+Epinephelus caninus;609217;NA;demersal;Demersal
+Epinephelus costae;609224;NA;demersal;Demersal
+Epinephelus drummondhayi;601204;NA;demersal;Demersal
+Epinephelus labriformis;608196;NA;demersal;Demersal
+Equulites klunzingeri;627024;NA;demersal;Demersal
+Erythrocles schlegelii;607693;NA;demersal;Demersal
+Eubleekeria splendens;604454;NA;demersal;Demersal
+Eugerres brasilianus;607533;NA;demersal;Demersal
+Eugerres plumieri;601053;NA;demersal;Demersal
+Eutrigla gurnardus;600068;Medium Demersals (30 - 90 cm);demersal;Demersal
+Gadus macrocephalus;600308;Large Demersals (>=90 cm);demersal;Demersal
+Gaidropsarus guttatus;608427;NA;demersal;Demersal
+Galeoides decadactylus;600341;Medium Demersals (30 - 90 cm);demersal;Demersal
+Genidens barbus;613992;NA;demersal;Demersal
+Gobius niger;600072;Small Demersals (<30 cm);demersal;Demersal
+Gobius vittatus;646337;NA;demersal;Demersal
+Gobiusculus flavescens;600074;NA;demersal;Demersal
+Gymnocanthus detrisus;623956;NA;demersal;Demersal
+Gymnocanthus pistilliger;611716;NA;demersal;Demersal
+Gymnocanthus tricuspis;604092;NA;demersal;Demersal
+Helicolenus percoides;614309;NA;demersal;Demersal
+Hemerocoetes monopterygius;649321;NA;demersal;Demersal
+Hexagrammos agrammus;608169;NA;demersal;Demersal
+Hippocampus guttulatus;601802;NA;demersal;Demersal
+Huso dauricus;604633;NA;demersal;Demersal
+Hyporthodus nigritus;601207;Large Demersals (>=90 cm);demersal;Demersal
+Hyporthodus niveatus;601208;Large Demersals (>=90 cm);demersal;Demersal
+Icelus canaliculatus;623906;NA;demersal;Demersal
+Icelus perminovi;623910;NA;demersal;Demersal
+Icelus spiniger;604109;NA;demersal;Demersal
+Inimicus japonicus;606386;NA;demersal;Demersal
+Jaydia lineata;608231;NA;demersal;Demersal
+Kathetostoma giganteum;612920;Large Demersals (>=90 cm);demersal;Demersal
+Lagocephalus inermis;608068;NA;demersal;Demersal
+Lagodon rhomboides;603576;NA;demersal;Demersal
+Lates calcarifer;600346;Large Demersals (>=90 cm);demersal;Demersal
+Latimeria chalumnae;602063;NA;demersal;Demersal
+Latridopsis ciliaris;612960;NA;demersal;Demersal
+Leiognathus equulus;604451;NA;demersal;Demersal
+Leiostomus xanthurus;600429;Medium Demersals (30 - 90 cm);demersal;Demersal
+Lepidotrigla cavillone;601722;Small Demersals (<30 cm);demersal;Demersal
+Leptomelanosoma indicum;604469;NA;demersal;Demersal
+Lethrinus lentjan;601863;Medium Demersals (30 - 90 cm);reef-associated;Demersal
+Lethrinus nebulosus;601846;Medium Demersals (30 - 90 cm);reef-associated;Demersal
+Liza saliens;601736;Medium Demersals (30 - 90 cm);demersal;Demersal
+Lophius americanus;600532;Large Demersals (>=90 cm);demersal;Demersal
+Lopholatilus chamaeleonticeps;600362;Large Demersals (>=90 cm);demersal;Demersal
+Lopholatilus villarii;615383;NA;demersal;Demersal
+Lutjanus alexandrei;663308;NA;demersal;Demersal
+Lutjanus purpureus;600171;Large Demersals (>=90 cm);demersal;Demersal
+Macrodon ancylodon;600417;Medium Demersals (30 - 90 cm);demersal;Demersal
+Macrodon atricauda;666332;NA;demersal;Demersal
+Macruronus novaezelandiae;601825;Large Demersals (>=90 cm);benthopelagic;Demersal
+Megalocottus platycephalus;604114;NA;demersal;Demersal
+Melanogrammus aeglefinus;601381;Large Demersals (>=90 cm);demersal;Demersal
+Menticirrhus americanus;600409;NA;demersal;Demersal
+Merluccius bilinearis;600323;Medium Demersals (30 - 90 cm);demersal;Demersal
+Merluccius merluccius;600030;Large Demersals (>=90 cm);demersal;Demersal
+Merluccius senegalensis;600321;Medium Demersals (30 - 90 cm);demersal;Demersal
+Micrometrus aurora;603635;NA;demersal;Demersal
+Micropogonias furnieri;607620;Medium Demersals (30 - 90 cm);demersal;Demersal
+Micropogonias undulatus;600408;Medium Demersals (30 - 90 cm);demersal;Demersal
+Monocentris reedi;652689;NA;demersal;Demersal
+Morone americana;600355;Medium Demersals (30 - 90 cm);demersal;Demersal
+Mugil hospes;601088;NA;demersal;Demersal
+Mugil liza;601090;Medium Demersals (30 - 90 cm);demersal;Demersal
+Mullus barbatus barbatus;600790;Medium Demersals (30 - 90 cm);demersal;Demersal
+Mullus barbatus ponticus;625966;NA;demersal;Demersal
+Mullus surmuletus;601327;Medium Demersals (30 - 90 cm);demersal;Demersal
+Muraena augusti;663860;NA;demersal;Demersal
+Mycteroperca microlepis;601212;Large Demersals (>=90 cm);reef-associated;Demersal
+Mycteroperca olfax;608204;NA;demersal;Demersal
+Mycteroperca rubra;601214;NA;demersal;Demersal
+Myoxocephalus brandtii;623937;NA;demersal;Demersal
+Myoxocephalus jaok;604118;NA;demersal;Demersal
+Myoxocephalus polyacanthocephalus;604121;NA;demersal;Demersal
+Myoxocephalus quadricornis;604122;NA;demersal;Demersal
+Myoxocephalus scorpius;601329;NA;demersal;Demersal
+Nelusetta ayraud;614549;NA;demersal;Demersal
+Nemadactylus macropterus;610106;Medium Demersals (30 - 90 cm);demersal;Demersal
+Nemipterus bathybius;604564;NA;demersal;Demersal
+Nemipterus japonicus;604559;Medium Demersals (30 - 90 cm);demersal;Demersal
+Nemipterus peronii;604554;NA;demersal;Demersal
+Nemipterus randalli;605852;NA;demersal;Demersal
+Nemipterus virgatus;600396;Medium Demersals (30 - 90 cm);demersal;Demersal
+Nemipterus zysron;605855;NA;demersal;Demersal
+Neogobius melanostomus;612019;NA;demersal;Demersal
+Neoscorpis lithophilus;605521;NA;demersal;Demersal
+Netuma thalassina;610220;Large Demersals (>=90 cm);demersal;Demersal
+Notothenia coriiceps;604702;Medium Demersals (30 - 90 cm);demersal;Demersal
+Odax pullus;612840;NA;demersal;Demersal
+Oedalechilus labeo;616324;NA;demersal;Demersal
+Oligocottus maculosus;604128;NA;demersal;Demersal
+Oncorhynchus clarkii;602688;NA;demersal;Demersal
+Opsanus beta;603067;NA;demersal;Demersal
+Pagellus bellottii;600436;Medium Demersals (30 - 90 cm);demersal;Demersal
+Pagellus natalensis;600437;NA;demersal;Demersal
+Pagrus auratus;606426;Large Demersals (>=90 cm);reef-associated;Demersal
+Pagrus major;600445;NA;demersal;Demersal
+Parajulis poecilepterus;605372;NA;demersal;Demersal
+Parapercis colias;600464;Medium Demersals (30 - 90 cm);demersal;Demersal
+Parazanclistius hutchinsi;614405;NA;demersal;Demersal
+Paristiopterus gallipavo;612353;NA;demersal;Demersal
+Pelates octolineatus;612852;NA;demersal;Demersal
+Pentanemus quinquarius;600342;Medium Demersals (30 - 90 cm);demersal;Demersal
+Percophis brasiliensis;600465;Medium Demersals (30 - 90 cm);demersal;Demersal
+Peristedion cataphractum;601746;NA;demersal;Demersal
+Petrus rupestris;600447;Large Demersals (>=90 cm);demersal;Demersal
+Pholis gunnellus;603804;NA;demersal;Demersal
+Platycephalus aurimaculatus;652457;NA;demersal;Demersal
+Platycephalus bassensis;604873;NA;demersal;Demersal
+Platycephalus conatus;614340;NA;demersal;Demersal
+Platycephalus fuscus;649820;NA;demersal;Demersal
+Platycephalus grandispinis;614341;NA;demersal;Demersal
+Platycephalus indicus;600950;Large Demersals (>=90 cm);reef-associated;Demersal
+Platycephalus laevigatus;652356;NA;demersal;Demersal
+Platycephalus richardsoni;604705;NA;demersal;Demersal
+Platycephalus speculator;603552;NA;demersal;Demersal
+Platycephalus westraliae;666159;NA;demersal;Demersal
+Pleurogrammus monopterygius;604037;Medium Demersals (30 - 90 cm);demersal;Demersal
+Plicofollis dussumieri;601287;NA;demersal;Demersal
+Plicofollis tenuispinis;601297;NA;demersal;Demersal
+Pollachius virens;601343;Large Demersals (>=90 cm);demersal;Demersal
+Polydactylus multiradiatus;604492;NA;demersal;Demersal
+Polyprion oxygeneios;600350;Large Demersals (>=90 cm);demersal;Demersal
+Pomadasys incisus;605003;Medium Demersals (30 - 90 cm);demersal;Demersal
+Pomatoschistus lozanoi;609190;NA;demersal;Demersal
+Pomatoschistus minutus;601345;NA;demersal;Demersal
+Prionotus punctatus;601245;NA;demersal;Demersal
+Prionotus stephanophrys;604029;NA;demersal;Demersal
+Pristipomoides multidens;600208;NA;demersal;Demersal
+Pristipomoides typus;600210;NA;demersal;Demersal
+Pronotogrammus martinicensis;603328;NA;demersal;Demersal
+Protonibea diacanthus;604571;NA;demersal;Demersal
+Protosalanx hyalocranius;612236;NA;demersal;Demersal
+Prototroctes maraena;606199;NA;demersal;Demersal
+Pseudochaenichthys georgianus;600475;Medium Demersals (30 - 90 cm);demersal;Demersal
+Pseudophycis bachus;602020;Large Demersals (>=90 cm);demersal;Demersal
+Pseudotolithus elongatus;600433;Medium Demersals (30 - 90 cm);demersal;Demersal
+Pseudotolithus senegalensis;600432;Large Demersals (>=90 cm);demersal;Demersal
+Pseudotolithus typus;604550;NA;demersal;Demersal
+Rhinogobius giurinus;615825;NA;demersal;Demersal
+Rhomboplites aurorubens;600213;Medium Demersals (30 - 90 cm);demersal;Demersal
+Salvelinus fontinalis;600246;NA;demersal;Demersal
+Saurida elongata;604764;NA;demersal;Demersal
+Saurida tumbil;606479;Medium Demersals (30 - 90 cm);reef-associated;Demersal
+Saurida undosquamis;601055;Medium Demersals (30 - 90 cm);reef-associated;Demersal
+Sciaena umbra;601707;Medium Demersals (30 - 90 cm);demersal;Demersal
+Sciaenops ocellatus;601191;Large Demersals (>=90 cm);demersal;Demersal
+Scorpaena guttata;603943;NA;demersal;Demersal
+Scorpaena loppei;617259;NA;demersal;Demersal
+Scorpaena maderensis;610185;NA;demersal;Demersal
+Scorpaena notata;601760;NA;demersal;Demersal
+Scorpaena porcus;601758;Medium Demersals (30 - 90 cm);demersal;Demersal
+Scorpaena scrofa;601759;Medium Demersals (30 - 90 cm);demersal;Demersal
+Scorpis aequipinnis;614390;NA;demersal;Demersal
+Sebastes alutus;600504;Medium Demersals (30 - 90 cm);bathydemersal;Demersal
+Sebastes brevispinis;603955;NA;demersal;Demersal
+Sebastes fasciatus;603969;NA;demersal;Demersal
+Sebastes goodei;603971;Medium Demersals (30 - 90 cm);demersal;Demersal
+Sebastes inermis;604586;NA;demersal;Demersal
+Sebastes jordani;603974;NA;demersal;Demersal
+Sebastes polyspinis;603990;NA;demersal;Demersal
+Sebastes semicinctus;604001;NA;demersal;Demersal
+Sebastes steindachneri;613053;NA;demersal;Demersal
+Sebastes variabilis;663583;NA;demersal;Demersal
+Sebastes variegatus;604006;NA;demersal;Demersal
+Sebastiscus marmoratus;604597;NA;demersal;Demersal
+Seriola quinqueradiata;600381;NA;demersal;Demersal
+Serranus atricauda;614418;NA;demersal;Demersal
+Serranus hepatus;614419;NA;demersal;Demersal
+Serranus scriba;601761;NA;demersal;Demersal
+Sillaginodes punctatus;608489;NA;demersal;Demersal
+Sillaginopsis panijus;600402;NA;demersal;Demersal
+Sillago analis;608492;NA;demersal;Demersal
+Sillago bassensis;608498;NA;demersal;Demersal
+Sillago burrus;608505;NA;demersal;Demersal
+Sillago ciliata;604709;NA;demersal;Demersal
+Sillago robusta;608535;NA;demersal;Demersal
+Sillago schomburgkii;607972;NA;demersal;Demersal
+Sillago sihama;604544;Medium Demersals (30 - 90 cm);reef-associated;Demersal
+Sillago vittata;608538;NA;demersal;Demersal
+Sparodon durbanensis;605383;NA;demersal;Demersal
+Sparus aurata;601164;Medium Demersals (30 - 90 cm);demersal;Demersal
+Spicara maena;604887;Small Demersals (<30 cm);pelagic-neritic;Demersal
+Spicara smaris;601766;Small Demersals (<30 cm);pelagic-oceanic;Demersal
+Stenodus leucichthys;602692;Large Demersals (>=90 cm);demersal;Demersal
+Symphodus cinereus;601791;NA;demersal;Demersal
+Synodus saurus;601771;NA;demersal;Demersal
+Takifugu rubripes;608198;NA;demersal;Demersal
+Thorogobius ephippiatus;607689;NA;demersal;Demersal
+Trachurus japonicus;600366;Medium Demersals (30 - 90 cm);pelagic-neritic;Demersal
+Trematomus bernacchii;607053;NA;demersal;Demersal
+Trematomus eulepidotus;607054;Medium Demersals (30 - 90 cm);demersal;Demersal
+Trematomus hansoni;607055;Medium Demersals (30 - 90 cm);demersal;Demersal
+Trematomus newnesi;607058;NA;demersal;Demersal
+Trematomus nicolai;607059;NA;demersal;Demersal
+Trematomus pennellii;607060;NA;demersal;Demersal
+Trematomus scotti;607061;NA;demersal;Demersal
+Trigloporus lastoviza;605081;Medium Demersals (30 - 90 cm);demersal;Demersal
+Triglops forficatus;604144;NA;demersal;Demersal
+Triglops pingelii;604148;NA;demersal;Demersal
+Umbrina canosai;600413;Medium Demersals (30 - 90 cm);demersal;Demersal
+Umbrina roncador;603590;NA;demersal;Demersal
+Upeneus pori;646375;NA;demersal;Demersal
+Uranoscopus scaber;601779;NA;demersal;Demersal
+Urophycis brasiliensis;600311;Medium Demersals (30 - 90 cm);demersal;Demersal
+Urophycis mystacea;660494;NA;demersal;Demersal
+Urophycis tenuis;600313;Large Demersals (>=90 cm);demersal;Demersal
+Zaprora silenus;603819;NA;demersal;Demersal
+Zoarces americanus;600480;Large Demersals (>=90 cm);demersal;Demersal
+Zoarces viviparus;600479;Medium Demersals (30 - 90 cm);demersal;Demersal
+Arnoglossus laterna;600041;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Arnoglossus thori;600043;NA;demersal;Flatfish
+Atheresthes evermanni;600518;Large Flatfishes (>=90 cm);demersal;Flatfish
+Austroglossus pectoralis;600528;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Bathysolea profundicola;608840;NA;bathypelagic;Flatfish
+Bothus podas;600207;NA;demersal;Flatfish
+Buglossidium luteum;600053;NA;demersal;Flatfish
+Citharus linguatula;604943;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Cleisthenes herzensteini;608560;NA;demersal;Flatfish
+Clidoderma asperrimum;608838;NA;demersal;Flatfish
+Colistium guntheri;612955;NA;demersal;Flatfish
+Colistium nudipinnis;612958;NA;demersal;Flatfish
+Cyclopsetta querna;613954;NA;demersal;Flatfish
+Cynoglossus canariensis;604948;NA;demersal;Flatfish
+Cynoglossus robustus;613073;NA;demersal;Flatfish
+Eopsetta grigorjewi;608842;NA;demersal;Flatfish
+Etropus crossotus;604221;NA;demersal;Flatfish
+Glyptocephalus cynoglossus;600026;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Glyptocephalus stelleri;608843;NA;demersal;Flatfish
+Glyptocephalus zachirus;604238;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Hippoglossoides dubius;608845;NA;demersal;Flatfish
+Hippoglossoides platessoides;604239;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Hippoglossoides robustus;604240;NA;demersal;Flatfish
+Hippoglossus stenolepis;600514;Large Flatfishes (>=90 cm);demersal;Flatfish
+Kareius bicoloratus;608557;NA;demersal;Flatfish
+Lepidopsetta bilineata;624237;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Lepidopsetta polyxystra;658882;NA;demersal;Flatfish
+Lepidorhombus boscii;600027;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Lepidorhombus whiffiagonis;600028;Small to Medium Flatfishes (<90 cm);bathydemersal;Flatfish
+Limanda aspera;600520;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Limanda limanda;600695;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Limanda punctatissima;608882;NA;demersal;Flatfish
+Limanda sakhalinensis;650421;NA;demersal;Flatfish
+Microchirus theophila;607690;NA;demersal;Flatfish
+Microchirus variegatus;600032;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Microstomus achne;608559;NA;demersal;Flatfish
+Microstomus kitt;601382;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Monochirus hispidus;602048;NA;demersal;Flatfish
+Paralichthys californicus;604228;Large Flatfishes (>=90 cm);demersal;Flatfish
+Paralichthys lethostigma;600981;NA;demersal;Flatfish
+Paralichthys patagonicus;614127;NA;demersal;Flatfish
+Pegusa impar;601762;NA;demersal;Flatfish
+Pegusa lascaris;601336;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Platichthys flesus;601341;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Pleuronectes platessa;601342;Large Flatfishes (>=90 cm);demersal;Flatfish
+Pleuronectes quadrituberculatus;604250;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Pleuronichthys cornutus;608551;NA;demersal;Flatfish
+Psettodes erumei;600513;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Pseudopleuronectes americanus;600524;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Pseudopleuronectes herzensteini;608556;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Pseudopleuronectes yokohamae;608170;NA;demersal;Flatfish
+Reinhardtius hippoglossoides;600516;Small to Medium Flatfishes (<90 cm);benthopelagic;Flatfish
+Rhombosolea leporina;612949;NA;demersal;Flatfish
+Rhombosolea plebeia;612950;NA;demersal;Flatfish
+Rhombosolea tapirina;608889;NA;demersal;Flatfish
+Scophthalmus maximus;601348;Large Flatfishes (>=90 cm);demersal;Flatfish
+Scophthalmus rhombus;600529;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Solea aegyptiaca;611707;NA;demersal;Flatfish
+Solea solea;600525;Small to Medium Flatfishes (<90 cm);demersal;Flatfish
+Symphurus plagiusa;601019;NA;demersal;Flatfish
+Synapturichthys kleinii;601763;NA;demersal;Flatfish
+Tanakius kitaharae;608558;NA;demersal;Flatfish
+Trinectes maculatus;604260;NA;demersal;Flatfish
+Verasper moseri;606609;NA;demersal;Flatfish
+Verasper variegatus;606607;NA;demersal;Flatfish
+Acanthocybium solandri;600089;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Alosa caspia caspia;601577;NA;pelagic-neritic;Pelagic
+Alosa fallax;605355;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Alosa immaculata;600105;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Alosa kessleri;601580;NA;pelagic-oceanic;Pelagic
+Anchoa mitchilli;600545;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Aphia minuta;600039;NA;pelagic-neritic;Pelagic
+Arrhamphus sclerolepis krefftii;616809;NA;pelagic-neritic;Pelagic
+Arripis georgianus;600392;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Arripis trutta;605048;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Atherina presbyter;600045;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Auxis rochei;600093;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Auxis thazard;600094;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Belone belone;600047;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Belone euxini;667051;NA;pelagic-oceanic;Pelagic
+Benthosema glaciale;600021;NA;pelagic-oceanic;Pelagic
+Brama japonica;603555;NA;pelagic-oceanic;Pelagic
+Brevoortia patronus;601589;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Caranx caballus;601900;NA;pelagic-neritic;Pelagic
+Caranx caninus;601901;NA;pelagic-oceanic;Pelagic
+Champsocephalus gunnari;600474;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Chloroscombrus chrysurus;600385;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Clupea harengus;600024;Medium Pelagics (30 - 90 cm);benthopelagic;Pelagic
+Clupea pallasii suworowi;647570;NA;pelagic-neritic;Pelagic
+Coilia mystus;600629;NA;pelagic-neritic;Pelagic
+Coilia nasus;600630;NA;pelagic-neritic;Pelagic
+Cololabis saira;600303;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Coregonus albula;600231;Medium Pelagics (30 - 90 cm);benthopelagic;Pelagic
+Coregonus autumnalis;602669;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Coregonus sardinella;602678;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Coryphaena equiselis;600007;NA;pelagic-oceanic;Pelagic
+Coryphaena hippurus;600006;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Cubiceps caeruleus;608397;NA;pelagic-oceanic;Pelagic
+Decapterus russelli;600374;Medium Pelagics (30 - 90 cm);benthopelagic;Pelagic
+Diaphus dumerilii;606590;NA;pelagic-oceanic;Pelagic
+Dicentrarchus punctatus;600394;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Elops saurus;600175;Medium Pelagics (30 - 90 cm);reef-associated;Pelagic
+Encrasicholina purpurea;600559;NA;pelagic-neritic;Pelagic
+Engraulis anchoita;601659;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Engraulis encrasicolus;600066;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Engraulis japonicus;601663;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Engraulis mordax;601664;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Engraulis ringens;600004;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Etrumeus golanii;666829;NA;pelagic-neritic;Pelagic
+Etrumeus sadina;601455;NA;pelagic-neritic;Pelagic
+Etrumeus whiteheadi;601456;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Euthynnus affinis;600096;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Euthynnus alletteratus;600097;Large Pelagics (>=90 cm);reef-associated;Pelagic
+Gadiculus argenteus;601875;NA;pelagic-oceanic;Pelagic
+Gadiculus thori;600025;NA;pelagic-oceanic;Pelagic
+Herklotsichthys quadrimaculatus;601494;Small Pelagics (<30 cm);reef-associated;Pelagic
+Hilsa kelee;601595;NA;pelagic-neritic;Pelagic
+Hirundichthys affinis;607457;NA;pelagic-neritic;Pelagic
+Huso huso;602067;NA;pelagic;Pelagic
+Hyporhamphus australis;612725;NA;pelagic-neritic;Pelagic
+Hyporhamphus melanochir;614582;NA;pelagic-neritic;Pelagic
+Istiompax indica;600217;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Istiophorus albicans;600078;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Istiophorus platypterus;600077;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Kajikia audax;600223;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Katsuwonus pelamis;600107;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Konosirus punctatus;601609;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Lactarius lactarius;600363;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Latris lineata;614417;NA;pelagic;Pelagic
+Lepidophanes guentheri;606591;NA;pelagic-oceanic;Pelagic
+Lestrolepis japonica;624646;NA;pelagic-oceanic;Pelagic
+Liza aurata;601735;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Liza haematocheila;613000;NA;pelagic-neritic;Pelagic
+Liza ramada;604583;NA;pelagic-neritic;Pelagic
+Lycengraulis grossidens;600552;NA;pelagic-neritic;Pelagic
+Makaira mazara;600218;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Makaira nigricans;600216;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Mallotus villosus;600252;Small Pelagics (<30 cm);pelagic-oceanic;Pelagic
+Megalops atlanticus;601079;Large Pelagics (>=90 cm);reef-associated;Pelagic
+Menidia menidia;600339;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Notoscopelus kroyeri;627753;NA;pelagic-oceanic;Pelagic
+Opisthonema libertate;601484;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Opisthonema oglinum;601486;Medium Pelagics (30 - 90 cm);reef-associated;Pelagic
+Osmerus dentex;622635;NA;pelagic-neritic;Pelagic
+Osmerus eperlanus;601334;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Osmerus mordax;600253;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Pagothenia borchgrevinki;607049;NA;pelagic-oceanic;Pelagic
+Pellona ditchela;601641;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Pentaceros richardsoni;603611;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Pleuragramma antarctica;600472;Small Pelagics (<30 cm);pelagic-oceanic;Pelagic
+Pomatomus saltatrix;600364;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Rachycentron canadum;603542;Large Pelagics (>=90 cm);reef-associated;Pelagic
+Rastrelliger brachysoma;600109;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Rastrelliger kanagurta;600111;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Salmo trutta;600238;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Sarda lineolata;604796;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Sarda orientalis;600114;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Sarda sarda;600115;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Sardina pilchardus;601350;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Sardinella aurita;601043;Medium Pelagics (30 - 90 cm);reef-associated;Pelagic
+Sardinella brasiliensis;601505;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Sardinella longiceps;601511;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Sardinella maderensis;601047;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Sardinella sindensis;601517;NA;pelagic-neritic;Pelagic
+Sardinella zunasi;601519;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Sardinops sagax;601477;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomber australasicus;600116;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomber colias;654736;NA;pelagic-neritic;Pelagic
+Scomber japonicus;600117;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomber scombrus;600118;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomberesox saurus;601084;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Scomberomorus brasiliensis;600119;Large Pelagics (>=90 cm);reef-associated;Pelagic
+Scomberomorus commerson;600121;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Scomberomorus guttatus;600123;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomberomorus lineolatus;600125;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomberomorus maculatus;600126;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Scomberomorus munroi;600129;NA;pelagic-neritic;Pelagic
+Scomberomorus plurilineatus;600132;NA;pelagic-neritic;Pelagic
+Scomberomorus queenslandicus;600133;NA;pelagic-neritic;Pelagic
+Scomberomorus semifasciatus;600135;NA;pelagic-neritic;Pelagic
+Sphyraena argentea;603678;NA;pelagic-neritic;Pelagic
+Sphyraena chrysotaenia;616905;NA;pelagic-neritic;Pelagic
+Sphyraena viridensis;610202;NA;pelagic-neritic;Pelagic
+Spratelloides lewisi;601459;NA;pelagic-neritic;Pelagic
+Sprattus fuegensis;601466;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Sprattus sprattus;601357;Small Pelagics (<30 cm);pelagic-neritic;Pelagic
+Stolephorus carpentariae;600564;NA;pelagic-neritic;Pelagic
+Stolephorus commersonnii;600566;NA;pelagic-neritic;Pelagic
+Stolephorus nelsoni;600574;NA;pelagic-neritic;Pelagic
+Tenualosa reevesii;601598;NA;pelagic-neritic;Pelagic
+Thaleichthys pacificus;600256;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Thryssa aestuaria;600581;NA;pelagic-neritic;Pelagic
+Thryssa hamiltonii;600589;NA;pelagic-neritic;Pelagic
+Thryssa setirostris;600599;NA;pelagic-neritic;Pelagic
+Thunnus alalunga;600142;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Thunnus albacares;600143;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Thunnus atlanticus;600144;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Thunnus obesus;600146;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Thunnus orientalis;614290;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Thunnus thynnus;600147;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Thunnus tonggol;600148;Large Pelagics (>=90 cm);pelagic-neritic;Pelagic
+Trachurus capensis;605382;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Trachurus mediterraneus;601278;Medium Pelagics (30 - 90 cm);pelagic-oceanic;Pelagic
+Trachurus trachurus;601365;Medium Pelagics (30 - 90 cm);pelagic-neritic;Pelagic
+Xiphias gladius;600226;Large Pelagics (>=90 cm);pelagic-oceanic;Pelagic
+Amblyraja radiata;602565;NA;demersal;Ray
+Bathyraja interrupta;602559;NA;bathydemersal;Ray
+Callorhinchus capensis;600167;Large Rays (>=90 cm);demersal;Ray
+Chimaera monstrosa;602503;Large Rays (>=90 cm);bathydemersal;Ray
+Dasyatis pastinaca;602060;Small to Medium Rays (<90 cm);demersal;Ray
+Dasyatis sabina;602574;NA;demersal;Ray
+Dipturus batis;602058;Large Rays (>=90 cm);demersal;Ray
+Dipturus innominatus;613145;NA;demersal;Ray
+Dipturus laevis;602561;Large Rays (>=90 cm);demersal;Ray
+Dipturus oxyrinchus;607616;Large Rays (>=90 cm);bathydemersal;Ray
+Dipturus pullopunctatus;607960;NA;demersal;Ray
+Dipturus trachyderma;650858;NA;bathydemersal;Ray
+Leucoraja erinacea;602557;Small to Medium Rays (<90 cm);demersal;Ray
+Leucoraja naevus;604326;Small to Medium Rays (<90 cm);demersal;Ray
+Leucoraja ocellata;602562;NA;demersal;Ray
+Leucoraja wallacei;607964;NA;bathydemersal;Ray
+Malacoraja senta;602568;NA;bathydemersal;Ray
+Mobula japanica;602587;NA;reef-associated;Ray
+Myliobatis californica;602582;NA;demersal;Ray
+Okamejei acutispina;615416;NA;demersal;Ray
+Pristis perotteti;651176;NA;benthopelagic;Ray
+Raja asterias;608924;Small to Medium Rays (<90 cm);demersal;Ray
+Raja brachyura;604552;Large Rays (>=90 cm);demersal;Ray
+Raja clavata;602059;Large Rays (>=90 cm);demersal;Ray
+Raja eglanteria;601252;NA;demersal;Ray
+Raja miraletus;605014;NA;demersal;Ray
+Raja montagui;604329;Small to Medium Rays (<90 cm);demersal;Ray
+Raja polystigma;609283;NA;demersal;Ray
+Raja rhina;602566;NA;bathydemersal;Ray
+Raja texana;601254;NA;demersal;Ray
+Raja undulata;607617;Large Rays (>=90 cm);demersal;Ray
+Rhinobatos annulatus;605509;NA;demersal;Ray
+Rhinobatos cemiculus;602074;NA;demersal;Ray
+Rhinobatos rhinobatos;605016;NA;demersal;Ray
+Torpedo californica;602552;NA;demersal;Ray
+Trygonorrhina fasciata;608733;NA;demersal;Ray
+Urolophus paucimaculatus;624002;NA;demersal;Ray
+Zearaja chilensis;651636;NA;demersal;Ray
+Zearaja nasuta;613144;Large Rays (>=90 cm);demersal;Ray
+Acanthopagrus bifasciatus;604543;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Acanthurus blochii;604750;NA;reef-associated;Reef
+Acanthurus dussumieri;601256;NA;reef-associated;Reef
+Acanthurus nigricans;606011;NA;reef-associated;Reef
+Acanthurus nigrofuscus;604739;NA;reef-associated;Reef
+Acanthurus xanthopterus;601261;NA;reef-associated;Reef
+Achoerodus gouldii;614420;NA;reef-associated;Reef
+Alectis indica;600010;NA;reef-associated;Reef
+Amblygaster sirm;601501;NA;reef-associated;Reef
+Archosargus rhomboidalis;601219;NA;reef-associated;Reef
+Argyrops filamentosus;604541;NA;reef-associated;Reef
+Balistes polylepis;604276;NA;reef-associated;Reef
+Balistes vetula;600019;NA;reef-associated;Reef
+Calamus nodosus;601226;NA;reef-associated;Reef
+Calamus proridens;601229;NA;reef-associated;Reef
+Calotomus japonicus;604356;NA;reef-associated;Reef
+Carangoides chrysophrys;604441;NA;reef-associated;Reef
+Carangoides ferdau;601921;NA;reef-associated;Reef
+Caranx ignobilis;601895;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Caranx melampygus;601906;NA;reef-associated;Reef
+Caranx ruber;601918;NA;reef-associated;Reef
+Centrolabrus exoletus;600055;NA;reef-associated;Reef
+Cephalopholis fulva;608816;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Cetoscarus ocellatus;666097;NA;reef-associated;Reef
+Chaetodipterus faber;601024;NA;reef-associated;Reef
+Chaetodon baronessa;605558;NA;reef-associated;Reef
+Chaetodon citrinellus;605561;NA;reef-associated;Reef
+Chaetodon miliaris;605136;NA;reef-associated;Reef
+Chaetodon trifascialis;605578;NA;reef-associated;Reef
+Cheimerius nufar;600444;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Chlorurus microrhinos;660479;NA;reef-associated;Reef
+Chlorurus sordidus;605556;NA;reef-associated;Reef
+Chlorurus spilurus;666478;NA;reef-associated;Reef
+Choerodon schoenleinii;606433;NA;reef-associated;Reef
+Chromis chromis;601706;Small Reef assoc fish (<30 cm);reef-associated;Reef
+Coris auricularis;625769;NA;reef-associated;Reef
+Coris julis;600058;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Ctenochaetus striatus;601262;NA;reef-associated;Reef
+Decapterus punctatus;600994;NA;reef-associated;Reef
+Diagramma pictum;604465;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Diplodus capensis;606004;NA;reef-associated;Reef
+Diplodus sargus cadenati;608066;NA;reef-associated;Reef
+Drepane punctata;600454;NA;reef-associated;Reef
+Encrasicholina devisi;600555;NA;reef-associated;Reef
+Encrasicholina heteroloba;600556;NA;reef-associated;Reef
+Epinephelides armatus;615101;NA;reef-associated;Reef
+Epinephelus areolatus;605367;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Epinephelus chlorostigma;605524;NA;reef-associated;Reef
+Epinephelus coioides;606465;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Epinephelus fasciatus;605348;NA;reef-associated;Reef
+Epinephelus itajara;600016;NA;reef-associated;Reef
+Epinephelus marginatus;606470;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Epinephelus morio;600017;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Epinephelus polyphekadion;606473;NA;reef-associated;Reef
+Epinephelus striatus;600018;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Epinephelus tauvina;604461;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Eucinostomus gula;601050;NA;reef-associated;Reef
+Gerres cinereus;601054;NA;reef-associated;Reef
+Gerres longirostris;607699;NA;reef-associated;Reef
+Girella punctata;606537;NA;reef-associated;Reef
+Glaucosoma hebraicum;614956;NA;reef-associated;Reef
+Gnathanodon speciosus;604464;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Gymnocranius audleyi;601835;NA;reef-associated;Reef
+Haemulon album;601126;NA;reef-associated;Reef
+Haemulon aurolineatum;601128;NA;reef-associated;Reef
+Haemulon parra;601139;NA;reef-associated;Reef
+Haemulon plumierii;601140;NA;reef-associated;Reef
+Haemulon sciurus;601141;NA;reef-associated;Reef
+Harengula humeralis;601479;NA;reef-associated;Reef
+Harengula jaguana;601480;NA;reef-associated;Reef
+Hippocampus erectus;603283;NA;reef-associated;Reef
+Hippocampus trimaculatus;622816;NA;reef-associated;Reef
+Hipposcarus harid;607906;NA;reef-associated;Reef
+Hyporhamphus unifasciatus;601060;NA;reef-associated;Reef
+Labrus merula;604582;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lachnolaimus maximus;601071;NA;reef-associated;Reef
+Lagocephalus sceleratus;604761;NA;reef-associated;Reef
+Lateolabrax japonicus;604589;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Lethrinus borbonicus;601844;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lethrinus enigmaticus;601855;NA;reef-associated;Reef
+Lethrinus mahsena;601843;NA;reef-associated;Reef
+Lethrinus microdon;601845;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lethrinus miniatus;601858;NA;reef-associated;Reef
+Lethrinus olivaceus;601864;NA;reef-associated;Reef
+Leviprora inops;612851;NA;reef-associated;Reef
+Lutjanus adetii;601395;NA;reef-associated;Reef
+Lutjanus analis;601403;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lutjanus campechanus;601423;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Lutjanus carponotatus;601424;NA;reef-associated;Reef
+Lutjanus ehrenbergii;600793;NA;reef-associated;Reef
+Lutjanus erythropterus;601406;NA;reef-associated;Reef
+Lutjanus fulviflamma;600261;NA;reef-associated;Reef
+Lutjanus fulvus;600262;NA;reef-associated;Reef
+Lutjanus gibbus;600265;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lutjanus griseus;600266;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lutjanus jocu;600154;NA;reef-associated;Reef
+Lutjanus kasmira;600156;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lutjanus malabaricus;600162;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Lutjanus quinquelineatus;600172;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lutjanus sebae;600178;NA;reef-associated;Reef
+Lutjanus synagris;600181;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Lutjanus vitta;600184;NA;reef-associated;Reef
+Moolgarda seheli;605659;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Muraena helena;601729;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Mycteroperca bonaci;601209;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Mycteroperca interstitialis;601211;NA;reef-associated;Reef
+Mycteroperca phenax;601213;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Mycteroperca rosacea;609398;NA;reef-associated;Reef
+Mycteroperca tigris;601215;NA;reef-associated;Reef
+Myoxocephalus stelleri;613065;NA;reef-associated;Reef
+Myripristis amaena;607773;NA;reef-associated;Reef
+Naso annulatus;606019;NA;reef-associated;Reef
+Naso brevirostris;606021;NA;reef-associated;Reef
+Naso hexacanthus;601263;NA;reef-associated;Reef
+Naso tuberosus;606023;NA;reef-associated;Reef
+Naso unicornis;601265;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Naso vlamingii;606024;NA;reef-associated;Reef
+Naucrates ductor;600998;NA;reef-associated;Reef
+Notolabrus celidotus;646850;NA;reef-associated;Reef
+Notolabrus fucicola;614422;NA;reef-associated;Reef
+Notolabrus parilus;646823;NA;reef-associated;Reef
+Ocyurus chrysurus;600188;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Opsanus tau;603069;NA;reef-associated;Reef
+Paralabrax maculatofasciatus;603336;NA;reef-associated;Reef
+Paranthias furcifer;601217;NA;reef-associated;Reef
+Parma microlepis;612470;NA;reef-associated;Reef
+Parupeneus barberinus;605987;NA;reef-associated;Reef
+Parupeneus forsskali;610994;NA;reef-associated;Reef
+Parupeneus heptacanthus;605991;NA;reef-associated;Reef
+Plectorhinchus sordidus;607626;NA;reef-associated;Reef
+Plectropomus leopardus;604826;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Plectropomus maculatus;604886;NA;reef-associated;Reef
+Polysteganus undulosus;604542;NA;reef-associated;Reef
+Pomacanthus imperator;606504;NA;reef-associated;Reef
+Pomacanthus maculosus;607903;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Pomacentrus moluccensis;605724;NA;reef-associated;Reef
+Pomacentrus wardi;610281;NA;reef-associated;Reef
+Pomadasys maculatus;604447;NA;reef-associated;Reef
+Priacanthus macracanthus;600356;Small Reef assoc fish (<30 cm);reef-associated;Reef
+Prionotus albirostris;614256;NA;reef-associated;Reef
+Prionotus evolans;601244;NA;reef-associated;Reef
+Pseudupeneus maculatus;601094;NA;reef-associated;Reef
+Pterois volitans;605195;NA;reef-associated;Reef
+Rhabdamia gracilis;605747;NA;reef-associated;Reef
+Rhabdosargus sarba;605368;NA;reef-associated;Reef
+Sargocentron diadema;604699;NA;reef-associated;Reef
+Scarus frenatus;605546;NA;reef-associated;Reef
+Scarus ghobban;605548;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Scarus niger;605550;NA;reef-associated;Reef
+Scarus psittacus;605553;NA;reef-associated;Reef
+Scarus rubroviolaceus;605555;NA;reef-associated;Reef
+Scarus schlegeli;604975;NA;reef-associated;Reef
+Scolopsis taeniata;605889;Small Reef assoc fish (<30 cm);reef-associated;Reef
+Scomberomorus cavalla;600120;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Scorpaena cardinalis;646983;NA;reef-associated;Reef
+Scorpis lineolata;627504;NA;reef-associated;Reef
+Sebastes constellatus;603961;NA;reef-associated;Reef
+Sebastes emphaeus;603966;NA;reef-associated;Reef
+Sebastes flavidus;600503;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Sebastes melanops;603979;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Sebastes mystinus;603983;NA;reef-associated;Reef
+Sebastes paucispinis;603987;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Sebastes pinniger;603989;Medium Reef assoc fish (30 - 90 cm);demersal;Reef
+Seriola dumerili;601005;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Siganus canaliculatus;604456;NA;reef-associated;Reef
+Siganus guttatus;604588;NA;reef-associated;Reef
+Siganus luridus;604613;NA;reef-associated;Reef
+Siganus rivulatus;604545;NA;reef-associated;Reef
+Siganus spinus;604457;NA;reef-associated;Reef
+Siganus sutor;604615;NA;reef-associated;Reef
+Siganus vermiculatus;604561;NA;reef-associated;Reef
+Sparisoma cretense;613025;Medium Reef assoc fish (30 - 90 cm);reef-associated;Reef
+Sparisoma frondosum;661101;NA;reef-associated;Reef
+Sparisoma viride;601161;NA;reef-associated;Reef
+Sphyraena flavicauda;607937;NA;reef-associated;Reef
+Sphyraena jello;604827;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Spratelloides delicatulus;601457;NA;reef-associated;Reef
+Stephanolepis hispidus;604281;NA;reef-associated;Reef
+Stolephorus insularis;600571;NA;reef-associated;Reef
+Symphodus melops;600059;Small Reef assoc fish (<30 cm);reef-associated;Reef
+Symphodus roissali;601709;NA;reef-associated;Reef
+Symphodus rostratus;604580;NA;reef-associated;Reef
+Symphodus tinca;601708;NA;reef-associated;Reef
+Synodus myops;602724;NA;reef-associated;Reef
+Tautoga onitis;600458;Large Reef assoc fish (>=90 cm);reef-associated;Reef
+Trachinotus falcatus;601010;NA;reef-associated;Reef
+Trachurus indicus;601982;NA;reef-associated;Reef
+Upeneus moluccensis;604444;NA;reef-associated;Reef
+Xyrichtys novacula;604581;NA;reef-associated;Reef
+Zebrasoma flavescens;606018;NA;reef-associated;Reef
+Zebrasoma scopas;605951;NA;reef-associated;Reef
+Carcharhinus acronotus;600857;NA;reef-associated;Shark
+Carcharhinus brevipinna;600865;NA;reef-associated;Shark
+Carcharhinus falciformis;600868;Large Sharks (>=90 cm);reef-associated;Shark
+Carcharhinus isodon;600872;NA;demersal;Shark
+Carcharhinus limbatus;600874;Large Sharks (>=90 cm);reef-associated;Shark
+Carcharhinus sorrah;600884;Large Sharks (>=90 cm);reef-associated;Shark
+Chiloscyllium plagiosum;605120;NA;reef-associated;Shark
+Deania calcea;600670;Large Sharks (>=90 cm);bathydemersal;Shark
+Furgaleus macki;605924;NA;demersal;Shark
+Galeocerdo cuvier;600886;Large Sharks (>=90 cm);benthopelagic;Shark
+Galeorhinus galeus;604642;Large Sharks (>=90 cm);benthopelagic;Shark
+Iago omanensis;605929;NA;bathydemersal;Shark
+Isurus oxyrinchus;600752;Large Sharks (>=90 cm);pelagic-oceanic;Shark
+Lamna ditropis;600755;NA;pelagic-oceanic;Shark
+Mustelus antarcticus;605943;NA;demersal;Shark
+Mustelus californicus;602538;NA;demersal;Shark
+Mustelus canis;602539;NA;demersal;Shark
+Mustelus henlei;602540;Large Sharks (>=90 cm);demersal;Shark
+Prionace glauca;600898;Large Sharks (>=90 cm);pelagic-oceanic;Shark
+Rhincodon typus;602081;NA;pelagic-oceanic;Shark
+Rhizoprionodon taylori;600904;NA;pelagic-oceanic;Shark
+Rhizoprionodon terraenovae;600905;NA;demersal;Shark
+Scyliorhinus canicula;600845;Large Sharks (>=90 cm);demersal;Shark
+Sphyrna lewini;600912;Large Sharks (>=90 cm);pelagic-oceanic;Shark
+Sphyrna tiburo;600915;NA;reef-associated;Shark
+Squalus acanthias;600139;Large Sharks (>=90 cm);benthopelagic;Shark
+Squalus blainville;600708;NA;demersal;Shark
