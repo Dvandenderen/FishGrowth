@@ -1,13 +1,13 @@
 
 #### plot fish asymptotic length and temperature - Figure 4
 ####################################################
-  setwd("H:/Werk/BP food web model/190319 - run for github/R-code processing")
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   load("Processed_files.Rdata")
   M2 <- sumdata[[2]]
   M4 <- sumdata[[4]]
   fishes <- sumdata[[7]]
 
-  setwd("H:/Werk/BP food web model/190319 - run for github/Output") # path for figures
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/Output") # path for figures
   library(latex2exp)  
 
 # part A - all fishes

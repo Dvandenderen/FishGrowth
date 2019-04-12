@@ -1,12 +1,12 @@
 
 #### plot fish growth and food availability - Figure 5
 ####################################################
-  setwd("H:/Werk/BP food web model/190319 - run for github/R-code processing")
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   load("Processed_files.Rdata")
   M6 <- sumdata[[6]]
   fishes <- sumdata[[7]]
   
-  setwd("H:/Werk/BP food web model/190319 - run for github/Output") # path for figures
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/Output") # path for figures
   library(latex2exp)  
   
   pdf("Growth_food.pdf",width=6,height=3.56)  
