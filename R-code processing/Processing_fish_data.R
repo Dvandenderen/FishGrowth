@@ -2,7 +2,7 @@
 
 ### growth data FishBase downloaded on 27 April 2018 
 ####################################################
-  setwd("..../Data")
+  setwd("H:/Werk/BP food web model/180709 - run for github/Data")
   load("Growthdata_Fishtot.Rdata")
 
 # select all growth data with tzero +- 2 (higher t0s suggest a poor fit/ a systematic error in the procedure to estimate fish age)
@@ -57,7 +57,7 @@
   
 ### We classified fish following the functional group classification from the SeaAroundUs project
   # When fish are not classified in the SAU project, we used the feeding type/habitat description 
-  # from FishBase and checked for sharks, rays and flatfishes
+  # from FishBase and checked for elasmobranchs
 ####################################################  
   Fishclass <-read.csv("Fish_classification.csv", header=T, sep=";")
   datFish<-cbind(datFish,Fishclass[match(datFish$Name,Fishclass$Name),c(5)])
@@ -141,6 +141,6 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
   
 rm(list=setdiff(ls(), "datFish"))
         
-# calculate maximum juvenile growth rate A = K*Linf
-  datFish$Arate <- datFish$K*datFish$Linf
+# calculate growth coefficient A = K*Linf*0.65
+  datFish$Arate <- datFish$K*datFish$Linf*0.65
 
