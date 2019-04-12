@@ -1,4 +1,6 @@
 # resample function
+
+# taken from John Colby (https://stackoverflow.com/questions/8041720/randomly-select-on-data-frame-for-unique-rows)
 Resamp <- function(df, column) {
   inds = sample(1:nrow(df))  
   df   = df[inds, ]
