@@ -1,10 +1,10 @@
 
 ### main analysis
 ####################################################
-  setwd("H:/Werk/BP food web model/190319 - run for github/R-code processing")
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   source("Processing_fish_data.R")
   
-  setwd("H:/Werk/BP food web model/190319 - run for github/R-code processing")
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   source("Resample.R")
   
 # use all observations
