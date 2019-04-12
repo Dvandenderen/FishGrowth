@@ -2,7 +2,7 @@
 
 ### growth data FishBase downloaded on 27 April 2018 
 ####################################################
-  setwd("H:/Werk/BP food web model/180709 - run for github/Data")
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/Data")
   load("Growthdata_Fishtot.Rdata")
 
 # select all growth data with tzero +- 2 (higher t0s suggest a poor fit/ a systematic error in the procedure to estimate fish age)
