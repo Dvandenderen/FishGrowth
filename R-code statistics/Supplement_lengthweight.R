@@ -31,8 +31,6 @@
   fishLW <- as.data.frame(fishLW)
 
   fishes <- cbind(fishes,fishLW[match(datFish$Name,fishLW$Species),c(2:3)])
-  colnames(fishes)[21] <- "a"
-  colnames(fishes)[22] <- "b"
 
   # calculate ambient temperature
   fishes$Temperature <- -100

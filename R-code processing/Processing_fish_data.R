@@ -139,7 +139,7 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
   datFish$Benthbiodeep<-rowMeans((datFish)[c("macroI_bio_deep_I", "macroI_bio_deep")],na.rm=T )
   datFish$detrpod<- rowMeans((datFish)[c("detr_prod_shal_I", "detr_prod_shal")],na.rm=T )
   datFish$detrpoddeep<- rowMeans((datFish)[c("detr_prod_deep_I", "detr_prod_deep")],na.rm=T )
-  
+
   datFish<-datFish[,-c(11:28)]
   
 rm(list=setdiff(ls(), "datFish"))
