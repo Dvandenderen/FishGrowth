@@ -44,6 +44,9 @@
   datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus masou masou"))
   datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus mykiss"))
   datFish<-subset(datFish,!(datFish$Name =="Rhincodon typus"))
+  datFish <- subset(datFish,!(datFish$Name == "Isurus oxyrinchus"))
+  datFish <- subset(datFish,!(datFish$Name == "Lamna ditropis"))
+  datFish <- subset(datFish,!(datFish$Name == "Prionace glauca"))
   
   # remove duplications
   datFish <-  datFish[!duplicated(datFish[,c("Name","K", "Linf","Tzero")]),]  
