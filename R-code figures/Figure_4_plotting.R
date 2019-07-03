@@ -115,7 +115,7 @@
   lines(ymax~Te,lty=2,col="red")
   axis(1,c(0,15,30))
   axis(2,c(1,2),c("10","100"),las=1)
-  text(5, 1, TeX("$Q_{10}$ = 0.9"), cex=1)
+  text(5, 1, TeX("$Q_{10}$ = 1.0"), cex=1)
   
   plot.new()
 

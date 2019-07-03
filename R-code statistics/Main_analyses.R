@@ -48,8 +48,9 @@
     out <- AIC(LM1,LM2)
     modFish[i,] <- out$AIC
   }
-  modsupport <- as.matrix(apply( modFish, 1, which.min))
+  modsupport <- as.matrix(apply(modFish, 1, which.min))
   table(modsupport)
+  colMeans(modFish)
   
 # parameter estimation of best model
   M1 <- matrix(data=NA,ncol=3,nrow=5000)
@@ -75,6 +76,7 @@
   }
   modsupport <- as.matrix(apply( modFish, 1, which.min))
   table(modsupport)
+  colMeans(modFish)
   
 # parameter estimation of best model
   M2 <- matrix(data=NA,ncol=2,nrow=5000)
@@ -106,6 +108,7 @@
   }
   modsupport <- as.matrix(apply( modFish, 1, which.min))
   table(modsupport)
+  colMeans(modFish)
 
 # parameter estimation of best model
   M3 <- matrix(data=NA,ncol=12,nrow=5000)
@@ -136,6 +139,7 @@
   }
   modsupport <- as.matrix(apply( modFish, 1, which.min))
   table(modsupport)
+  colMeans(modFish)
   
 # parameter estimation of best model
   M4 <- matrix(data=NA,ncol=9,nrow=5000)
@@ -177,6 +181,7 @@
   }
   modsupport <- as.matrix(apply( modFish, 1, which.min))
   table(modsupport)
+  colMeans(modFish)
 
 # parameter estimation of best model  
   M5 <- matrix(data=NA,ncol=6,nrow=5000)
@@ -218,6 +223,7 @@
   }
   modsupport <- as.matrix(apply( modFish, 1, which.min))
   table(modsupport)
+  colMeans(modFish)
   
 # parameter estimation of best model
   M6 <- matrix(data=NA,ncol=10,nrow=5000)

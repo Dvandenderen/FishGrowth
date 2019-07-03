@@ -179,7 +179,7 @@
   lines(ymax~Te,lty=2,col="red")
   axis(1,c(0,15,30))
   axis(2,c(0,1,2),c("1","10","100"),las=1)
-  text(5, 2.3, TeX("$Q_{10}$ = 1.9"), cex=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 2.1"), cex=1)
   
 # large demersal
 #################

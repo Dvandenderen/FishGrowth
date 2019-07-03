@@ -65,7 +65,7 @@
   fishes <- subset(fishes,!(is.na(fishes$a)))
   fishes$b <- 1/fishes$b
  
-  length  <- 5 # change between 5 and 25 cm
+  length  <- 25 # change between 5 and 25 cm
   fishes$newA <- fishes$a^fishes$b*(1/fishes$b)*length^(-fishes$b+1-(2/3))*fishes$K*fishes$Linf 
   
   # get log10 
