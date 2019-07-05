@@ -1,127 +1,310 @@
 
-#### plot fish growth and temperature - Figure 3
+#### plot fish growth and temperature - Figure 2
 ####################################################
   setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   load("Processed_files.Rdata")
+  M1 <- sumdata[[1]]
   M3 <- sumdata[[3]]
   fishes <- sumdata[[7]]
-  
+
   setwd("C:/Users/pdvd/Online for git/FishGrowth/Output") # path for figures
   library(latex2exp)  
 
-  pdf("Illustration_growth.pdf",width=4,height=5.2)  
-  
-# get the prediction from M3
-  meanfish  <- colMeans(M3)
-  
-# get Q10 output in matrix
-  Q10data <- matrix(data = NA, ncol =2, nrow =4)
-  colnames(Q10data) <- c("100cm","30cm")
-  rownames(Q10data) <- c("pel","deep","dem","shray")
-    
-# calculate temp effect + Q10 for asymptoic length 100 cm fish
-  Te <- seq(0,30)
-  Li <- rep(log10(100),length(Te))
-  tz <- rep(0,length(Te))
+# part A - all fishes
+  pdf("Growth_allfish.pdf",width=4,height=3.56)  
+  par(mar=c(2, 4, 2, 1))
+  plot(LArate~Temperature, data=fishes,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="all fish")
 
-  ypel  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-           meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-           meanfish["Temperature:groupingPEL"]*Te
-  Q10data[1,1] <- (10^(ypel[31])/10^(ypel[1]))^(10/(30-0))
+  # get the prediction from M1
+  meanfish  <- colMeans(M1)
+  Te <- seq(min(fishes$Temperature),max(fishes$Temperature),0.1)
+  y <- meanfish[1]+meanfish[2]*Te
+
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M1[i,]
+    uncer[i,] <- fsamp[1]+fsamp[2]*Te
+    } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
   
-  ydeep  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-            meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li
-  Q10data[2,1] <- (10^(ydeep[31])/10^(ydeep[1]))^(10/(30-0))
+  # get Q10 
+  QTe<- c(10,20)
+  yq10 <- meanfish[1]+meanfish[2]*QTe
+  10^(yq10[2])/10^(yq10[1])
   
-  ydem  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-           meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-           meanfish["Temperature:groupingDEM"]*Te
-  Q10data[3,1] <- (10^(ydem[31])/10^(ydem[1]))^(10/(30-0))
-  
-  yshray  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-             meanfish["groupingSHRAY"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-             meanfish["Temperature:groupingSHRAY"]*Te
-  Q10data[4,1] <- (10^(yshray[31])/10^(yshray[1]))^(10/(30-0))
-  
-# calculate temp effect + Q10 for asymptoic length 30 cm fish 
-  Te <- seq(0,30)
-  Li <- rep(log10(30),length(Te))
-  tz <- rep(0,length(Te))
-  
-  yspel  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-            meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-            meanfish["Temperature:groupingPEL"]*Te
-  Q10data[1,2] <- (10^(yspel[31])/10^(yspel[1]))^(10/(30-0))
-  
-  ysdeep  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-             meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li
-  Q10data[2,2] <- (10^(ysdeep[31])/10^(ysdeep[1]))^(10/(30-0))
-  
-  ysdem  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingDEM"]*Te
-  Q10data[3,2] <- (10^(ysdem[31])/10^(ysdem[1]))^(10/(30-0))
-  
-  ysshray  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingSHRAY"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingSHRAY"]*Te
-  Q10data[4,2] <- (10^(ysshray[31])/10^(ysshray[1]))^(10/(30-0))
-  
-# now plot the temperature effects for the different guilds
-  
-  # first add metabolic Q10 of 2.5 from A = 3 at 0 degrees celsius
-  temp <- c(0,30)
-  metl <- c(log10(3),log10(3*2.5^3))
-  plot(metl~temp, lty=5,lwd=1,type="l", xlim=c(-2,30), ylim=c(0.4,1.7),col="black",
-       xaxt="n",yaxt="n", xlab=TeX("$Temperature$ ^{o}$C"),ylab="Growth coef. A")
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="PEL" & fishes$Linf >100])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="PEL" & fishes$Linf >100])
-  lines(ypel[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax],
-        col="#ef3b2c", lty=1,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="DEEP" & fishes$Linf >100])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="DEEP" & fishes$Linf >100])
-  lines(ydeep[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax],
-        col="#bdbdbd", lty=1,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="DEM" & fishes$Linf >100])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="DEM" & fishes$Linf >100])
-  lines(ydem[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax], 
-        col="#08519c", lty=1,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="SHRAY" & fishes$Linf >100])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="SHRAY" & fishes$Linf >100])
-  lines(yshray[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax],
-        col="black", lty=1,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="PEL" & fishes$Linf <30])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="PEL" & fishes$Linf <30])
-  lines(yspel[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax],
-        col="#ef3b2c", lty=5,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="DEEP" & fishes$Linf <30])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="DEEP" & fishes$Linf <30])
-  lines(ysdeep[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax],
-        col="#bdbdbd", lty=5,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="DEM" & fishes$Linf<30])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="DEM" & fishes$Linf <30])
-  lines(ysdem[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax], 
-        col="#08519c", lty=5,lwd=3)
-  
-  nbmin <- min(fishes$Temperature[fishes$grouping=="SHRAY" & fishes$Linf <30])
-  nbmax <- max(fishes$Temperature[fishes$grouping=="SHRAY" & fishes$Linf <30])
-  lines(ysshray[Te>nbmin & Te< nbmax]~Te[Te>nbmin & Te< nbmax],
-        col="black", lty=5,lwd=3)
-  
+  # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
   axis(1,c(0,15,30))
-  axis(2,c(log10(2),log10(4),log10(8),log10(16),log10(32)),c("2","4","8","16","32"),las=1)
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 1.4"), cex=1)
+  dev.off()
   
-  legend(0,log10(45), legend=c("pelagics", "demersals", "elasmobranchs","deep-living"),
-         col=c("#ef3b2c","#08519c","black","#bdbdbd"), lty=c(1,1,1,1),lwd=c(2,2,2,2), cex=0.8,
-         box.lty=0)
-dev.off()
+# part B - fish guilds
+  pdf("Growth_guilds.pdf",width=6,height=3.56)
+  par(mfrow=c(2,3), mar=c(2, 4, 2, 1))
   
+  # get the prediction from M3
+  meanfish <- colMeans(M3)
 
+# large pelagics
+#################
+  lPel <- subset(fishes,fishes$grouping == "PEL" & fishes$Linf > 80)
+  plot(LArate~Temperature, data=lPel,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="large pelagics")
+  
+  # get the prediction
+  Te <- seq(min(lPel$Temperature),max(lPel$Temperature),0.1)
+  Li <- rep(mean(lPel$LLinf),length(Te))
+  tz <- rep(0,length(Te))
+  y  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
+        meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
+        meanfish["Temperature:groupingPEL"]*Te
+  
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M3[i,]
+    uncer[i,] <- fsamp["Intercept"]+fsamp["Temperature"]*Te+fsamp["LLinf"]*Li+
+                 fsamp["groupingPEL"]+fsamp["Tzero"]*tz + fsamp["Temperature:LLinf"]*Te*Li + 
+                 fsamp["Temperature:groupingPEL"]*Te
+  } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
 
+  # get Q10 
+  QTe<- c(10,20)
+  Li <- rep(mean(lPel$LLinf),length(QTe))
+  tz <- rep(0,length(QTe))
+  yq10 <- meanfish["Intercept"]+meanfish["Temperature"]*QTe+meanfish["LLinf"]*Li+
+          meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*QTe*Li + 
+          meanfish["Temperature:groupingPEL"]*QTe
+  10^(yq10[2])/10^(yq10[1])
+  
+   # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
+  axis(1,c(0,15,30))
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 1.4"), cex=1)
+  
+# small pelagics
+################
+  sPel <- subset(fishes,fishes$grouping == "PEL" & fishes$Linf <= 80)
+  plot(LArate~Temperature, data=sPel,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="small pelagics")
+  
+  # get the prediction
+  Te <- seq(min(sPel$Temperature),max(sPel$Temperature),0.1)
+  Li <- rep(mean(sPel$LLinf),length(Te))
+  tz <- rep(0,length(Te))
+  y  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
+        meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
+        meanfish["Temperature:groupingPEL"]*Te
+  
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M3[i,]
+    uncer[i,] <- fsamp["Intercept"]+fsamp["Temperature"]*Te+fsamp["LLinf"]*Li+
+      fsamp["groupingPEL"]+fsamp["Tzero"]*tz + fsamp["Temperature:LLinf"]*Te*Li + 
+      fsamp["Temperature:groupingPEL"]*Te
+  } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
+
+  # get Q10 
+  QTe<- c(10,20)
+  Li <- rep(mean(sPel$LLinf),length(QTe))
+  tz <- rep(0,length(QTe))
+  yq10 <- meanfish["Intercept"]+meanfish["Temperature"]*QTe+meanfish["LLinf"]*Li+
+          meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*QTe*Li + 
+          meanfish["Temperature:groupingPEL"]*QTe
+  10^(yq10[2])/10^(yq10[1])
+  
+  # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
+  axis(1,c(0,15,30))
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 1.7"), cex=1)
+  
+# shark and ray
+#################
+  shray <- subset(fishes,fishes$grouping == "SHRAY")
+  plot(LArate~Temperature, data=shray,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="elasmobranchs")
+  
+  # get the prediction
+  Te <- seq(min(shray$Temperature),max(shray$Temperature),0.1)
+  Li <- rep(mean(shray$LLinf),length(Te))
+  tz <- rep(0,length(Te))
+  y  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
+        meanfish["groupingSHRAY"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
+        meanfish["Temperature:groupingSHRAY"]*Te
+  
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M3[i,]
+    uncer[i,] <-fsamp["Intercept"]+fsamp["Temperature"]*Te+fsamp["LLinf"]*Li+
+                fsamp["groupingSHRAY"]+fsamp["Tzero"]*tz + fsamp["Temperature:LLinf"]*Te*Li + 
+                fsamp["Temperature:groupingSHRAY"]*Te
+  } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
+  
+  # get Q10 
+  QTe<- c(10,20)
+  Li <- rep(mean(shray$LLinf),length(QTe))
+  tz <- rep(0,length(QTe))
+  yq10 <- meanfish["Intercept"]+meanfish["Temperature"]*QTe+meanfish["LLinf"]*Li+
+          meanfish["groupingSHRAY"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*QTe*Li + 
+          meanfish["Temperature:groupingSHRAY"]*QTe
+  10^(yq10[2])/10^(yq10[1])
+  
+  # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
+  axis(1,c(0,15,30))
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 2.1"), cex=1)
+  
+# large demersal
+#################
+  lDem <- subset(fishes,fishes$grouping == "DEM" & fishes$Linf > 80)
+  plot(LArate~Temperature, data=lDem,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="large demersals")
+  
+  # get the prediction
+  Te <- seq(min(lDem$Temperature),max(lDem$Temperature),0.1)
+  Li <- rep(mean(lDem$LLinf),length(Te))
+  tz <- rep(0,length(Te))
+  y  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
+        meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
+        meanfish["Temperature:groupingDEM"]*Te
+  
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M3[i,]
+    uncer[i,] <-fsamp["Intercept"]+fsamp["Temperature"]*Te+fsamp["LLinf"]*Li+
+      fsamp["groupingDEM"]+fsamp["Tzero"]*tz + fsamp["Temperature:LLinf"]*Te*Li + 
+      fsamp["Temperature:groupingDEM"]*Te
+  } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
+  
+  # get Q10 
+  QTe<- c(10,20)
+  Li <- rep(mean(lDem$LLinf),length(QTe))
+  tz <- rep(0,length(QTe))
+  yq10 <- meanfish["Intercept"]+meanfish["Temperature"]*QTe+meanfish["LLinf"]*Li+
+          meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*QTe*Li + 
+          meanfish["Temperature:groupingDEM"]*QTe
+  10^(yq10[2])/10^(yq10[1])
+  
+  # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
+  axis(1,c(0,15,30))
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 1.2"), cex=1)
+  
+# small demersal
+#################
+  sDem <- subset(fishes,fishes$grouping == "DEM" & fishes$Linf <= 80)
+  plot(LArate~Temperature, data=sDem,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="small demersals")
+  
+  # get the prediction
+  Te <- seq(min(sDem$Temperature),max(sDem$Temperature),0.1)
+  Li <- rep(mean(sDem$LLinf),length(Te))
+  tz <- rep(0,length(Te))
+  y  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
+        meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
+        meanfish["Temperature:groupingDEM"]*Te
+  
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M3[i,]
+    uncer[i,] <-fsamp["Intercept"]+fsamp["Temperature"]*Te+fsamp["LLinf"]*Li+
+      fsamp["groupingDEM"]+fsamp["Tzero"]*tz + fsamp["Temperature:LLinf"]*Te*Li + 
+      fsamp["Temperature:groupingDEM"]*Te
+  } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
+  
+  # get Q10 
+  QTe<- c(10,20)
+  Li <- rep(mean(sDem$LLinf),length(QTe))
+  tz <- rep(0,length(QTe))
+  yq10 <-  meanfish["Intercept"]+meanfish["Temperature"]*QTe+meanfish["LLinf"]*Li+
+           meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*QTe*Li + 
+           meanfish["Temperature:groupingDEM"]*QTe
+  10^(yq10[2])/10^(yq10[1])
+  
+  # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
+  axis(1,c(0,15,30))
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 1.4"), cex=1)
+  
+# deep-living
+#################
+  deep <- subset(fishes,fishes$grouping == "DEEP")
+  plot(LArate~Temperature, data=deep,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
+       yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
+       ylab="Growth coef. A",main="deep-living")
+  
+  # get the prediction
+  Te <- seq(min(deep$Temperature),max(deep$Temperature),0.1)
+  Li <- rep(mean(deep$LLinf),length(Te))
+  tz <- rep(0,length(Te))
+  y  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
+        meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li
+
+  # get uncertainty (min and max of all resampled estimates)
+  uncer <- matrix(data=NA,nrow=5000, ncol=length(Te))
+  for (i  in 1:5000){
+    fsamp <- M3[i,]
+    uncer[i,] <- fsamp["Intercept"]+fsamp["Temperature"]*Te+fsamp["LLinf"]*Li+
+      fsamp["Tzero"]*tz + fsamp["Temperature:LLinf"]*Te*Li
+  } 
+  ymin <- apply(uncer,2,FUN=min)
+  ymax <- apply(uncer,2,FUN=max)
+ 
+  # get Q10 
+  QTe<- c(10,20)
+  Li <- rep(mean(deep$LLinf),length(QTe))
+  tz <- rep(0,length(QTe))
+  yq10 <- meanfish["Intercept"]+meanfish["Temperature"]*QTe+meanfish["LLinf"]*Li+
+          meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*QTe*Li
+  10^(yq10[2])/10^(yq10[1])
+  
+  # finish plotting
+  lines(y~Te,lwd=2, col="blue") 
+  lines(ymin~Te,lty=2,col="red")
+  lines(ymax~Te,lty=2,col="red")
+  axis(1,c(0,15,30))
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
+  text(5, 2.3, TeX("$Q_{10}$ = 1.2"), cex=1)
+  dev.off()  
+  
