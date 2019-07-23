@@ -5,3 +5,5 @@ Data and code for analysing fish data for growth and asymptotic size
 
 
 https://zenodo.org/badge/144699986.svg
+
+https://zenodo.org/badge/latestdoi/144699986
