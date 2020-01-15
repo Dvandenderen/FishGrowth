@@ -51,8 +51,8 @@
   # remove duplications
   datFish <-  datFish[!duplicated(datFish[,c("Name","K", "Linf","Tzero")]),]  
   
-### This resulted in 2502 von Bertalanffy growth observations    
-  # from 774 different species in 165 different ecoregions.
+### This resulted in 2495 von Bertalanffy growth observations    
+  # from 771 different species in 165 different ecoregions.
   ####################################################
   obs <- nrow(datFish)
   uni_obs <- length(unique(datFish$Name))
@@ -66,7 +66,6 @@
   datFish<-cbind(datFish,Fishclass[match(datFish$Name,Fishclass$Name),c(5)])
   colnames(datFish)[10] <- "Func_group"
 
-  
 ### link fish growth data per ecoregion to environmental data
   # most of these parameters were taken from a global earth system model (GFDL-ESM2.6) (see methods)
 ####################################################  
@@ -79,17 +78,11 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
   # surftemp = average temperature in the upper 100 meter 
   # btmtemp_shal = the average at bottom depths < 500 meter
   # btmtemp_deep = the average at bottom depths > 500 meter
-  # macroI_bio_shal = macrofauna invertebrate biomass (mg C/m2) at bottom depths < 500 meter
-  # macroI_bio_deep = macrofauna invertebrate biomass (mg C/m2) at bottom depths > 500 meter
-  # detr_prod_shal = detritus flux reaching the seabed (mg C/m2/day) at bottom depths < 500 meter
-  # detr_prod_deep = detritus flux reaching the seabed (mg C/m2/day) at bottom depths > 500 meter
-  
+  # NPP = average daily net primary production (mg C/m2/day) 
+
   Ecodat$zoo_bio <- Ecodat$zoo_bio/1000 # gr C/m2
   Ecodat$zoo_prod <- Ecodat$zoo_prod/1000 # gr C/m2/day
-  Ecodat$macroI_bio_shal <- Ecodat$macroI_bio_shal/1000 # gr C/m2
-  Ecodat$macroI_bio_deep <- Ecodat$macroI_bio_deep/1000 # gr C/m2
-  Ecodat$detr_prod_shal <- Ecodat$detr_prod_shal/1000 # gr C/m2/day
-  Ecodat$detr_prod_deep <- Ecodat$detr_prod_deep/1000 # gr C/m2/day
+  Ecodat$NPP <- Ecodat$NPP/1000 # gr C/m2/day
 
 # In some ecoregions, there are no grid cells < 500 meter 
 # (the 1 degree grid is coarse for areas with a small shelf) and we predicted these values 
@@ -102,32 +95,15 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
     Ecodat$btmtemp_shal[i][is.na(Ecodat$btmtemp_shal[i])] <- tempcoef[1]+tempcoef[2]*Ecodat$surftemp[i]
   }
   
-  # get relationships between shallow benthic biomass and deep biomass
-  # plot(log10(Ecodat$macroI_bio_shal)~log10(Ecodat$macroI_bio_deep))
-  bent<-(lm(log10(Ecodat$macroI_bio_shal)~log10(Ecodat$macroI_bio_deep)))
-  bentcoef <- coef(bent)
-  for (i in 1:nrow(Ecodat)){
-    Ecodat$macroI_bio_shal[i][is.na(Ecodat$macroI_bio_shal[i])] <- 10^(bentcoef[1]+bentcoef[2]*log10(Ecodat$macroI_bio_deep[i]))
-  }
-  
-  # get relationships between detrital flux shallow and deep
-  # plot(log10(Ecodat$detr_prod_shal)~log10(Ecodat$detr_prod_deep))
-  detri<-(lm(log10(Ecodat$detr_prod_shal)~log10(Ecodat$detr_prod_deep)))
-  detricoef <- coef(detri)
-  for (i in 1:nrow(Ecodat)){
-    Ecodat$detr_prod_shal[i][is.na(Ecodat$detr_prod_shal[i])] <- 10^(detricoef[1]+detricoef[2]*log10(Ecodat$detr_prod_deep[i]))
-  }
-
-  
 ### now link environmental data to fish growth 
 ###############################################
   # first for ecoregion_I
-  datFish<-cbind(datFish,Ecodat[match(datFish$Ecoregion_I,Ecodat$Nb_spalding),c(3:11)])
-  colnames(datFish)[11:19]<-c("zoo_bio_I","zoo_prod_I","surftemp_I","btmtemp_shal_I","btmtemp_deep_I",
-                              "macroI_bio_shal_I","macroI_bio_deep_I","detr_prod_shal_I","detr_prod_deep_I")
+  datFish<-cbind(datFish,Ecodat[match(datFish$Ecoregion_I,Ecodat$Nb_spalding),c(3:8)])
+  colnames(datFish)[11:16]<-c("zoo_bio_I","zoo_prod_I","surftemp_I","btmtemp_shal_I","btmtemp_deep_I",
+                              "NPP_I")
   
   # now for ecoregion_II
-  datFish<-cbind(datFish,Ecodat[match(datFish$Ecoregions_II,Ecodat$Nb_spalding),c(3:11)])
+  datFish<-cbind(datFish,Ecodat[match(datFish$Ecoregions_II,Ecodat$Nb_spalding),c(3:8)])
   
   # now get the average of the two regions
   datFish$Zoobio<-rowMeans((datFish)[c("zoo_bio_I", "zoo_bio")],na.rm=T )
@@ -135,14 +111,11 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
   datFish$Stemp<-rowMeans((datFish)[c("surftemp_I", "surftemp")],na.rm=T )
   datFish$Btemp<-rowMeans((datFish)[c("btmtemp_shal_I", "btmtemp_shal")],na.rm=T )
   datFish$Btempdeep<-rowMeans((datFish)[c("btmtemp_deep_I", "btmtemp_deep")],na.rm=T )
-  datFish$Bentbio<-rowMeans((datFish)[c("macroI_bio_shal_I", "macroI_bio_shal")],na.rm=T )
-  datFish$Benthbiodeep<-rowMeans((datFish)[c("macroI_bio_deep_I", "macroI_bio_deep")],na.rm=T )
-  datFish$detrpod<- rowMeans((datFish)[c("detr_prod_shal_I", "detr_prod_shal")],na.rm=T )
-  datFish$detrpoddeep<- rowMeans((datFish)[c("detr_prod_deep_I", "detr_prod_deep")],na.rm=T )
+  datFish$NPProd<-rowMeans((datFish)[c("NPP_I", "NPP")],na.rm=T )
 
-  datFish<-datFish[,-c(11:28)]
+  datFish<-datFish[,-c(11:22)]
   
-rm(list=setdiff(ls(), "datFish"))
+  rm(list=setdiff(ls(), "datFish"))
         
 # calculate growth coefficient A = K*Linf*0.65
   datFish$Arate <- datFish$K*datFish$Linf*0.65
