@@ -95,6 +95,4 @@
   M5   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) + (1|uniReg), data=fishes, REML=T) 
 
   rm(list= ls()[!(ls() %in% c('M1','M2','M3','M3_LMER','M1_ML','M3_ML','M5','fishes'))])
-
-  sumdata <- list(M1,M2,M3,M3_LMER,M1_ML,M3_ML,M5,fishes)
-  save(sumdata,file="Processed_files.Rdata")  
+  
