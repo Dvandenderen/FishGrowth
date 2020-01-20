@@ -6,10 +6,7 @@
 ####################################################
   setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   source("Processing_fish_data.R")
-  
-  setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
-  source("Resample.R")
-  
+
   fishes <- datFish
 
 ### get unique species and use FishBase for length weight
@@ -63,76 +60,91 @@
   fishes <- subset(fishes,!(is.na(fishes$a)))
   fishes$b <- 1/fishes$b
  
-  length  <- 25 # change between 5 and 25 cm
+  # now do it for 2 lengths, 5 and 25
+  length  <- 25
   fishes$newA <- fishes$a^fishes$b*(1/fishes$b)*length^(-fishes$b+1-(2/3))*fishes$K*fishes$Linf 
   
   # get log10 
-  fishes$LLinf <- log10(fishes$Linf)
-  fishes$LArate <- log10(fishes$newA) # now with the new coefficient A
+  fishes$LLinf  <- log10(fishes$Linf)
+  fishes$LArate <- log10(fishes$newA)
   
-  # parameter estimation of best model
-  M3 <- matrix(data=NA,ncol=12,nrow=5000)
-  colnames(M3) <- c("Intercept","Temperature","LLinf","groupingDEM","groupingPEL","groupingSHRAY",
-                    "Tzero","Temperature:LLinf","Temperature:groupingDEM","Temperature:groupingPEL",
-                    "Temperature:groupingSHRAY","Rsquare")
-  for (i in 1:5000){
-    subFish <-  Resamp(fishes,1) # select unique species
-    LM3 <- lm(LArate ~ Temperature * LLinf + grouping*Temperature +Tzero, data=subFish)
-    M3[i,] <-c(coefficients(LM3),summary(LM3)$adj.r.squared)
-  }
+  # get across species temperature (average per species)
+  temp<- fishes %>% 
+    group_by(Name) %>%
+    summarise_at(c("Temperature"), mean, na.rm = TRUE)
+  temp <- as.data.frame(temp)
   
-  # get the prediction from M3
-  meanfish  <- colMeans(M3)
+  fishes <- cbind(fishes, temp[match(fishes$Name,temp$Name), c(2)])
+  colnames(fishes)[25] <- "T_across"
+  
+  # get within species temperature difference (obs - average per species)
+  fishes$T_within <- fishes$Temperature - fishes$T_across
+  
+  # get across species length (average per species)
+  length <- fishes %>% 
+    group_by(Name) %>%
+    summarise_at(c("Linf"), mean, na.rm = TRUE)
+  length <- as.data.frame(length)
+  length$meanLLinf <- log10(length$Linf)
+  fishes <- cbind(fishes, length[match(fishes$Name,length$Name), c(3)])
+  colnames(fishes)[27] <- "across_LLinf"
+  
+  library(lme4)
+  # fit model
+  M5_LW   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) 
+                  + (1|uniReg), data=fishes, REML=T, control = lmerControl(optimizer ="Nelder_Mead")) 
   
   # get Q10 output in matrix
-  Q10data <- matrix(data = NA, ncol =2, nrow =4)
+  Q10data <- matrix(data = NA, ncol=2, nrow =4)
   colnames(Q10data) <- c("100cm","30cm")
-  rownames(Q10data) <- c("pel","deep","dem","shray")
+  rownames(Q10data) <- c("pel","dem","shray","deep")
   
-  # calculate Q10 for asymptoic length 100 cm fish
-  Te <- seq(0,30)
-  Li <- rep(log10(100),length(Te))
-  tz <- rep(0,length(Te))
+  # calculate Q10 
+  Name <- rep(NA,length(2))
+  uniReg <- rep(NA, length(2))
+  T_within <- c(0,0)
+  T_across <- c(10,20)
   
-  ypel  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingPEL"]*Te
-  Q10data[1,1] <- (10^(ypel[31])/10^(ypel[1]))^(10/(30-0))
+  # pelagics
+  across_LLinf <- c(log10(30),log10(30))
+  grouping <- c("PEL","PEL")
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[1,2] <- 10^(yq10[2])/10^(yq10[1])
   
-  ydeep  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li
-  Q10data[2,1] <- (10^(ydeep[31])/10^(ydeep[1]))^(10/(30-0))
+  across_LLinf <- c(log10(100),log10(100))
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[1,1] <- 10^(yq10[2])/10^(yq10[1])
   
-  ydem  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingDEM"]*Te
-  Q10data[3,1] <- (10^(ydem[31])/10^(ydem[1]))^(10/(30-0))
+  # demersal
+  across_LLinf <- c(log10(30),log10(30))
+  grouping <- c("DEM","DEM")
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[2,2] <- 10^(yq10[2])/10^(yq10[1])
   
-  yshray  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingSHRAY"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingSHRAY"]*Te
-  Q10data[4,1] <- (10^(yshray[31])/10^(yshray[1]))^(10/(30-0))
+  across_LLinf <- c(log10(100),log10(100))
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[2,1] <- 10^(yq10[2])/10^(yq10[1])
   
-  # calculate Q10 for asymptoic length 30 cm fish 
-  Te <- seq(0,30)
-  Li <- rep(log10(30),length(Te))
-  tz <- rep(0,length(Te))
+  # elasmobranchs (only 100 cm)
+  grouping <- c("SHRAY","SHRAY")
+  across_LLinf <- c(log10(100),log10(100))
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[3,1] <- 10^(yq10[2])/10^(yq10[1])
   
-  yspel  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingPEL"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingPEL"]*Te
-  Q10data[1,2] <- (10^(yspel[31])/10^(yspel[1]))^(10/(30-0))
+  # deep
+  across_LLinf <- c(log10(30),log10(30))
+  grouping <- c("DEEP","DEEP")
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[4,2] <- 10^(yq10[2])/10^(yq10[1])
   
-  ysdeep  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li
-  Q10data[2,2] <- (10^(ysdeep[31])/10^(ysdeep[1]))^(10/(30-0))
+  across_LLinf <- c(log10(100),log10(100))
+  newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
+  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  Q10data[4,1] <- 10^(yq10[2])/10^(yq10[1])
   
-  ysdem  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingDEM"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingDEM"]*Te
-  Q10data[3,2] <- (10^(ysdem[31])/10^(ysdem[1]))^(10/(30-0))
-  
-  ysshray  <- meanfish["Intercept"]+meanfish["Temperature"]*Te+meanfish["LLinf"]*Li+
-    meanfish["groupingSHRAY"]+meanfish["Tzero"]*tz + meanfish["Temperature:LLinf"]*Te*Li + 
-    meanfish["Temperature:groupingSHRAY"]*Te
-  Q10data[4,2] <- (10^(ysshray[31])/10^(ysshray[1]))^(10/(30-0))
