@@ -57,7 +57,6 @@
   M2   <- lmer(LArate ~  Temperature + T_across + (1 |Name) + (1|uniReg) ,data=fishes, REML=T) 
 
 # parameter estimation of within-between species model with random slope per species 
-#M3   <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=T)
 # convergence error (which did not happen in previous R version, used alternative optimizer)
   M3   <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=T,
              control = lmerControl(optimizer ="Nelder_Mead"))

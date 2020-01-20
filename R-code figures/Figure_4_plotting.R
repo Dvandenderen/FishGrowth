@@ -10,7 +10,7 @@
   M1_prof <- profile(M1)
   M1_unc <- confint(M1_prof,level=0.95)
 
-  setwd("H:/Werk/BP food web model/191213 mixed model centering")
+  setwd("C:/Users/pdvd/Online for git/FishGrowth/Output")
 # part A - all fishes
   pdf("Growth_allfish.pdf",width=6.9,height=3.56)  
   par(mfrow=c(1,2), mar=c(4, 4, 2, 1))
