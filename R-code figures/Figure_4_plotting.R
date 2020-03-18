@@ -1,4 +1,4 @@
-#### plot fish growth and temperature, guild and asymptotic size - Figure 5
+#### plot fish growth and temperature, guild and asymptotic size - Figure 4
 ####################################################
   setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code statistics")  
   source("Main_analyses.R")

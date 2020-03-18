@@ -1,5 +1,5 @@
 
-#### plot growth and food - Figure 7
+#### plot growth and food - Figure 6
 ####################################################
   setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code statistics")  
   source("Main_analyses.R")
@@ -39,12 +39,13 @@
 
 # no fit the models and plot the data
   setwd("C:/Users/pdvd/Online for git/FishGrowth/Output")
-  pdf("Growth_food.pdf",width=6.9,height=3.56)
+  pdf("Growth_food.pdf",width=6.9,height=3)
   par(mfrow=c(1,3), mar=c(6, 4, 2, 1))
   
   plot(eco_zero$intercept ~ eco_zero$NPProd,ylab="Ecoregion random intercept growth variation",
        las=1,xlab=TeX("NPP (g  C / m$^2$ / day)"))  
   axis(1,c(0.5,1,1.5,2))
+  text(0.4, 0.2, "(a)", cex=1)
   mod1 <- lm(intercept ~ NPProd, data = eco_zero)
   summary(mod1)
   
@@ -59,6 +60,7 @@
   plot(eco_sub$intercept ~ eco_sub$Zoobio, ylab="",xlab=TeX("Zooplankton biomass (g  C / m$^2$)"),yaxt="n") 
   axis(1,c(0.5,1,1.5,2))
   axis(2,c(-.2,-.1,0,.1,.2),c("","","","",""))
+  text(0.6, 0.2, "(b)", cex=1)
   mod2 <- lm(intercept ~ Zoobio, data = eco_sub)
   summary(mod2)
   
@@ -70,9 +72,10 @@
   lines(newx, preds[ ,3], lty = 'dashed', col = 'red')
   lines(newx, preds[ ,2], lty = 'dashed', col = 'red')
   
-  plot(eco_sub$intercept ~ eco_sub$Zooprod,ylab="",xlab=TeX("NPP (g  C / m$^2$ / day)"),yaxt="n",xaxt="n",xlim=c(0.005,0.08)) 
+  plot(eco_sub$intercept ~ eco_sub$Zooprod,ylab="",xlab=TeX("ZP (g  C / m$^2$ / day)"),yaxt="n",xaxt="n",xlim=c(0.005,0.08)) 
   axis(1,c(0.01,0.04,0.08))
   axis(2,c(-.2,-.1,0,.1,.2),c("","","","",""))
+  text(0.01, 0.2, "(c)", cex=1)
   mod3 <- lm(intercept ~ Zooprod, data=eco_sub)
   summary(mod3)
   
