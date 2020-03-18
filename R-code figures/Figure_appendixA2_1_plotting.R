@@ -37,7 +37,7 @@
   
   library(latex2exp)
   plot((w[,2]/w[,1]), xlim=c(1,9), ylim=c(0,50), type ="l", xlab="Time (years)",
-       ylab=TeX("Specific growth (dw/dt)/w)"),xaxt="n",yaxt="n",lwd=2,col="grey")
+       ylab=TeX("Specific growth (dw/dt)/w"),xaxt="n",yaxt="n",lwd=2,col="grey")
   
   axis(1,c(1,5,9),c("0","4","8"))
   axis(2,c(0,25,50),las=1)
