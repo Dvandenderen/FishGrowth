@@ -12,7 +12,7 @@
 # create a plot with the metabolic prediction
   temp <- c(0,30)
   metl <- c(log10(3),log10(3*2.5^3))
-  plot(metl~temp, lty=5,lwd=1,type="l", xlim=c(-2,30), ylim=c(0.4,1.7),col="black",
+  plot(metl~temp, lty=1,lwd=1,type="l", xlim=c(-2,30), ylim=c(0.4,1.7),col="red",
        xaxt="n",yaxt="n", xlab=TeX("$Temperature$ ^{o}$C"),ylab="Growth coef. A", 
        main="Asymp. length is 100 cm",cex.main = 0.7)
   
@@ -29,7 +29,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="#ef3b2c",lwd=2)
+  lines(yn~T_across,col="#74a9cf",lwd=2,lty=1)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
@@ -43,7 +43,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="black",lwd=2)
+  lines(yn~T_across,col="black",lwd=2,lty=1)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
@@ -57,7 +57,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="#08519c",lwd=2)
+  lines(yn~T_across,col="#74a9cf",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
@@ -71,7 +71,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="#bdbdbd",lwd=2)
+  lines(yn~T_across,col="black",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
@@ -79,7 +79,7 @@
   10^(yq10[2])/10^(yq10[1])
   
   legend(0,log10(45), legend=c("pelagics", "demersals", "elasmobranchs","deep-living"),
-         col=c("#ef3b2c","#08519c","black","#bdbdbd"), lty=c(1,1,1,1),lwd=c(2,2,2,2), cex=0.8,
+         col=c("#74a9cf","#74a9cf","black","black"), lty=c(1,5,1,5),lwd=c(2,2,2,2), cex=0.8,
          box.lty=0)
   
   axis(1,c(0,15,30))
@@ -89,7 +89,7 @@
   # create a plot with the metabolic prediction
   temp <- c(0,30)
   metl <- c(log10(3),log10(3*2.5^3))
-  plot(metl~temp, lty=5,lwd=1,type="l", xlim=c(-2,30), ylim=c(0.4,1.7),col="black",
+  plot(metl~temp, lty=1,lwd=1,type="l", xlim=c(-2,30), ylim=c(0.4,1.7),col="red",
        xaxt="n",yaxt="n", xlab=TeX("$Temperature$ ^{o}$C"),ylab="", 
        main = "Asymp. length is 30 cm",cex.main = 0.7)
   
@@ -102,7 +102,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="#ef3b2c",lwd=2,lty=1)
+  lines(yn~T_across,col="#74a9cf",lwd=2,lty=1)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
@@ -116,7 +116,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="#08519c",lwd=2,lty=1)
+  lines(yn~T_across,col="#74a9cf",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
@@ -130,7 +130,7 @@
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
   yn <- predict(M5, newdata = newdat, re.form = NA)
-  lines(yn~T_across,col="#bdbdbd",lwd=2,lty=1)
+  lines(yn~T_across,col="black",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)

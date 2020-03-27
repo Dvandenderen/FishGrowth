@@ -61,12 +61,6 @@
   M3   <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=T,
              control = lmerControl(optimizer ="Nelder_Mead"))
 
-# get model with formal class lmerMod,  to use with REsim
-  detach("package:lmerTest", unload=TRUE)
-  M3_LMER   <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=T,
-                    control = lmerControl(optimizer ="Nelder_Mead")) 
-  library(lmerTest)
-
 # compare random slope/intercept with random intercept
   M1_ML <- lmer(LArate ~ T_within + T_across + (1 | Name) + (1|uniReg) ,data=fishes, REML=F)
   M3_ML <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=F)
@@ -93,5 +87,5 @@
   
   M5   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) + (1|uniReg), data=fishes, REML=T) 
 
-  rm(list= ls()[!(ls() %in% c('M1','M2','M3','M3_LMER','M1_ML','M3_ML','M5','fishes'))])
+  rm(list= ls()[!(ls() %in% c('M1','M2','M3','M1_ML','M3_ML','M5','fishes'))])
   

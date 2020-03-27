@@ -69,23 +69,23 @@
 # part B - within versus between species response with constant slope
   plot(LArate~Temperature, data=fishes,ylim=c(-0.4,2.5),las=1,xlim=c(-2,30),cex=1,
        yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
-       ylab="", col="white")
+       ylab="Growth coef. A", col="white")
   
-  # get the within species prediction from M1 
-  randomeff <- ranef(M1)$Name
+# get the within species prediction from M3 
+  randomeff <- ranef(M3)$Name
   unifish <- rownames(randomeff)
   for (j in 1:771){
     dd <- subset(fishes,fishes$Name == unifish[j])
     T_within <- c(min(dd$T_within),max(dd$T_within))
     if (length(unique(T_within)) > 1){
-    T_across <- rep(dd$T_across[1],2)
-    yn <- fixef(M1)[1] + randomeff[j,1] + fixef(M1)[3] * T_across + fixef(M1)[2]*T_within
-    Tall <- c(min(dd$Temperature),max(dd$Temperature))
-    lines(yn~Tall,col="grey",lwd=1)
+      T_across <- rep(dd$T_across[1],2)
+      yn <- fixef(M3)[1] + randomeff[j,1] + fixef(M3)[3] * T_across + fixef(M3)[2]*T_within + randomeff[j,2] * T_within 
+      Tall <- c(min(dd$Temperature),max(dd$Temperature))
+      lines(yn~Tall,col="grey",lwd=1)
     }
   }
-
-  # add metabolic prediction
+  
+# add metabolic prediction
   T_across <- seq(min(fishes$Temperature),max(fishes$Temperature),0.1)
   A_0  <- 3
   Amin <- A_0*2.5^((min(T_across)-0)/10)
@@ -93,27 +93,26 @@
   ymet <- c(log10(Amin),log10(Amax))
   Tmet <- c(min(T_across),max(T_across))
   lines(ymet~Tmet, col="red", lwd=2,lty=1)  
-    
-  # get the across species prediction from M1
+  
+# get the across species prediction from M3
   T_across <- seq(min(fishes$Temperature),max(fishes$Temperature),0.1)
   Name <- rep(NA,length(T_across))
   uniReg <- rep(NA, length(T_across))
   T_within <- rep(0,length(T_across))
   newdat <- data.frame(T_across,Name,T_within,uniReg)
-  yn <- predict(M1, newdata = newdat, re.form = NA)
+  yn <- predict(M3, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="blue",lwd=2)
   
-  # calculate the 95% confidence interval
-  pred <- bootMer(M1, function(x) predict(x, newdata = newdat, re.form = NA), nsim = 100)
+# calculate the 95% confidence interval
+  pred <- bootMer(M3, function(x) predict(x, newdata = newdat, re.form = NA), nsim = 100)
   CI.lower = apply(pred$t, 2, function(x) as.numeric(quantile(x, probs=.025, na.rm=TRUE)))
   CI.upper = apply(pred$t, 2, function(x) as.numeric(quantile(x, probs=.975, na.rm=TRUE)))
   lines(CI.upper~T_across,lty=2,col="blue")
   lines(CI.lower~T_across,lty=2,col="blue")
-
   
-  # finish plotting
+# finish plotting
   axis(1,c(0,15,30))
-  axis(2,c(0,1,2),c("","",""),las=1)
+  axis(2,c(0,1,2),c("1","10","100"),las=1)
   
   legend(-2,log10(300), legend=c("within", "between", "MTE"),
          col=c("grey","blue","red"), lty=c(1,1,1),lwd=c(2,2,2), cex=0.8,
