@@ -75,7 +75,7 @@
   temp <- as.data.frame(temp)
   
   fishes <- cbind(fishes, temp[match(fishes$Name,temp$Name), c(2)])
-  colnames(fishes)[25] <- "T_across"
+  colnames(fishes)[28] <- "T_across"
   
   # get within species temperature difference (obs - average per species)
   fishes$T_within <- fishes$Temperature - fishes$T_across
@@ -87,11 +87,11 @@
   length <- as.data.frame(length)
   length$meanLLinf <- log10(length$Linf)
   fishes <- cbind(fishes, length[match(fishes$Name,length$Name), c(3)])
-  colnames(fishes)[27] <- "across_LLinf"
+  colnames(fishes)[30] <- "across_LLinf"
   
   library(lme4)
   # fit model
-  M5_LW   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) 
+  M4_LW   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) 
                   + (1|uniReg), data=fishes, REML=T, control = lmerControl(optimizer ="Nelder_Mead")) 
   
   # get Q10 output in matrix
@@ -109,42 +109,42 @@
   across_LLinf <- c(log10(30),log10(30))
   grouping <- c("PEL","PEL")
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[1,2] <- 10^(yq10[2])/10^(yq10[1])
   
   across_LLinf <- c(log10(100),log10(100))
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[1,1] <- 10^(yq10[2])/10^(yq10[1])
   
   # demersal
   across_LLinf <- c(log10(30),log10(30))
   grouping <- c("DEM","DEM")
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[2,2] <- 10^(yq10[2])/10^(yq10[1])
   
   across_LLinf <- c(log10(100),log10(100))
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[2,1] <- 10^(yq10[2])/10^(yq10[1])
   
   # elasmobranchs (only 100 cm)
   grouping <- c("SHRAY","SHRAY")
   across_LLinf <- c(log10(100),log10(100))
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[3,1] <- 10^(yq10[2])/10^(yq10[1])
   
   # deep
   across_LLinf <- c(log10(30),log10(30))
   grouping <- c("DEEP","DEEP")
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[4,2] <- 10^(yq10[2])/10^(yq10[1])
   
   across_LLinf <- c(log10(100),log10(100))
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5_LW, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4_LW, newdata = newdat, re.form = NA)
   Q10data[4,1] <- 10^(yq10[2])/10^(yq10[1])
   

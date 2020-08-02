@@ -5,10 +5,54 @@
   setwd("C:/Users/pdvd/Online for git/FishGrowth/Data")
   load("Growthdata_Fishtot.Rdata")
 
-# select all growth data with tzero +- 2 (higher t0s suggest a poor fit/ a systematic error in the procedure to estimate fish age)
-  datFish <- subset(datFish,datFish$Tzero <= 2 & datFish$Tzero >= -2 )
+### We classified fish following the functional group classification from the SeaAroundUs project
+# When fish are not classified in the SAU project, we used the feeding type/habitat description 
+# from FishBase and checked for elasmobranchs
+####################################################  
+  Fishclass <-read.csv("Fish_classification.csv", header=T, sep=";")
+  datFish<-cbind(datFish,Fishclass[match(datFish$Name,Fishclass$Name),c(5)])
+  colnames(datFish)[10] <- "Func_group"
 
+# select all growth data with tzero +- 2 (higher t0s suggest a poor fit/ a systematic error in the procedure to estimate fish age)
+# this is not the case for elasmobranchs that have a larger size at birth
+  elas <- subset(datFish,datFish$Func_group =="Shark" | datFish$Func_group == "Ray")
+  elas <- subset(elas,elas$Tzero <= 2 & elas$Tzero >= -5)
   
+  teleost <- subset(datFish,!(datFish$Func_group =="Shark" | datFish$Func_group == "Ray"))
+  teleost <- subset(teleost,teleost$Tzero <= 2 & teleost$Tzero >= -2 )
+
+  datFish <- rbind(teleost,elas)  
+
+# remove species from genera Huso, Acipenser, Anguilla, Salmo and Oncorhynchus as these mainly grow in freshwater
+  datFish<-subset(datFish,!(datFish$Name =="Anguilla anguilla"))
+  datFish<-subset(datFish,!(datFish$Name =="Anguilla mossambica"))
+  datFish<-subset(datFish,!(datFish$Name =="Huso huso"))
+  datFish<-subset(datFish,!(datFish$Name =="Acipenser stellatus"))
+  datFish<-subset(datFish,!(datFish$Name =="Acipenser sturio"))
+  datFish<-subset(datFish,!(datFish$Name =="Salmo trutta"))
+  datFish<-subset(datFish,!(datFish$Name =="Salmo salar"))
+  datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus clarkii"))
+  datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus masou masou"))
+  datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus mykiss"))
+  
+# remove oceanic sharks following Compagno 2008 chapter 2 Pelagic Elasmobranch Diversity
+  datFish <- subset(datFish,!(datFish$Name =="Rhincodon typus"))
+  datFish <- subset(datFish,!(datFish$Name == "Isurus oxyrinchus"))
+  datFish <- subset(datFish,!(datFish$Name == "Lamna ditropis"))
+  datFish <- subset(datFish,!(datFish$Name == "Prionace glauca"))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus brevipinna"))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus falciformis" ))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus leucas"))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus limbatus"))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus longimanus"))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus obscurus"))
+  datFish <- subset(datFish,!(datFish$Name == "Carcharhinus plumbeus"))
+  datFish <- subset(datFish,!(datFish$Name == "Galeocerdo cuvier"))
+  datFish <- subset(datFish,!(datFish$Name == "Galeorhinus galeus"))
+  datFish <- subset(datFish,!(datFish$Name == "Mobula japanica"))
+  datFish <- subset(datFish,!(datFish$Name == "Myliobatis californica"))
+  datFish <- subset(datFish,!(datFish$Name ==  "Sphyrna lewini"))
+
 ### load match between sampling locality and ecoregion (manually linked) 
   # linked to a particular marine ecoregion, or two neighboring (unknown == 0) 
 ####################################################
@@ -32,39 +76,15 @@
   datFish$uniReg<-paste(datFish$Ecoregion_I,datFish$Ecoregions_II,sep="_")
   datFish <-subset(datFish, datFish$uniReg !="0_0") # remove all unknown areas 
 
-# remove species from genera Huso, Acipenser, Anguilla, Salmo and Oncorhynchus as these mainly grow in freshwater
-  datFish<-subset(datFish,!(datFish$Name =="Anguilla anguilla"))
-  datFish<-subset(datFish,!(datFish$Name =="Anguilla mossambica"))
-  datFish<-subset(datFish,!(datFish$Name =="Huso huso"))
-  datFish<-subset(datFish,!(datFish$Name =="Acipenser stellatus"))
-  datFish<-subset(datFish,!(datFish$Name =="Acipenser sturio"))
-  datFish<-subset(datFish,!(datFish$Name =="Salmo trutta"))
-  datFish<-subset(datFish,!(datFish$Name =="Salmo salar"))
-  datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus clarkii"))
-  datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus masou masou"))
-  datFish<-subset(datFish,!(datFish$Name =="Oncorhynchus mykiss"))
-  datFish<-subset(datFish,!(datFish$Name =="Rhincodon typus"))
-  datFish <- subset(datFish,!(datFish$Name == "Isurus oxyrinchus"))
-  datFish <- subset(datFish,!(datFish$Name == "Lamna ditropis"))
-  datFish <- subset(datFish,!(datFish$Name == "Prionace glauca"))
-  
-  # remove duplications
+# remove duplications
   datFish <-  datFish[!duplicated(datFish[,c("Name","K", "Linf","Tzero")]),]  
   
-### This resulted in 2495 von Bertalanffy growth observations    
+### This resulted in 2517 von Bertalanffy growth observations    
   # from 771 different species in 165 different ecoregions.
   ####################################################
   obs <- nrow(datFish)
   uni_obs <- length(unique(datFish$Name))
   uni_EcReg <- length(unique(c(datFish$Ecoregion_I,datFish$Ecoregions_II))) 
-  
-### We classified fish following the functional group classification from the SeaAroundUs project
-  # When fish are not classified in the SAU project, we used the feeding type/habitat description 
-  # from FishBase and checked for elasmobranchs
-####################################################  
-  Fishclass <-read.csv("Fish_classification.csv", header=T, sep=";")
-  datFish<-cbind(datFish,Fishclass[match(datFish$Name,Fishclass$Name),c(5)])
-  colnames(datFish)[10] <- "Func_group"
 
 ### link fish growth data per ecoregion to environmental data
   # most of these parameters were taken from a global earth system model (GFDL-ESM2.6) (see methods)
@@ -99,7 +119,7 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
 ###############################################
   # first for ecoregion_I
   datFish<-cbind(datFish,Ecodat[match(datFish$Ecoregion_I,Ecodat$Nb_spalding),c(3:8)])
-  colnames(datFish)[11:16]<-c("zoo_bio_I","zoo_prod_I","surftemp_I","btmtemp_shal_I","btmtemp_deep_I",
+  colnames(datFish)[14:19]<-c("zoo_bio_I","zoo_prod_I","surftemp_I","btmtemp_shal_I","btmtemp_deep_I",
                               "NPP_I")
   
   # now for ecoregion_II
@@ -113,7 +133,7 @@ Ecodat <-read.csv("Ecoregions_data.csv", header=T, sep=";")
   datFish$Btempdeep<-rowMeans((datFish)[c("btmtemp_deep_I", "btmtemp_deep")],na.rm=T )
   datFish$NPProd<-rowMeans((datFish)[c("NPP_I", "NPP")],na.rm=T )
 
-  datFish<-datFish[,-c(11:22)]
+  datFish<-datFish[,-c(14:25)]
   
   rm(list=setdiff(ls(), "datFish"))
         

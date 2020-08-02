@@ -7,9 +7,16 @@
   setwd("C:/Users/pdvd/Online for git/FishGrowth/R-code processing")
   source("Processing_fish_data.R")
   
-  # use all observations with tzero -1 and +1
-  fishes <- subset(datFish,datFish$Tzero >= -1 & datFish$Tzero <= 1)
-  
+  # select all growth data with tzero +- 1 
+  # this is not the case for elasmobranchs that have a larger size at birth
+  elas <- subset(datFish,datFish$Func_group =="Shark" | datFish$Func_group == "Ray")
+  elas <- subset(elas,elas$Tzero <= 1 & elas$Tzero >= -5)
+
+  teleost <- subset(datFish,!(datFish$Func_group =="Shark" | datFish$Func_group == "Ray"))
+  teleost <- subset(teleost,teleost$Tzero <= 1 & teleost$Tzero >= -1)
+
+  fishes <- rbind(teleost,elas)  
+
   # derive ambient temperature
   fishes$Temperature <- -100
   for(i in 1:nrow(fishes)) {

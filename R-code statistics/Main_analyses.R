@@ -42,7 +42,7 @@
   temp <- as.data.frame(temp)
 
   fishes <- cbind(fishes, temp[match(fishes$Name,temp$Name), c(2)])
-  colnames(fishes)[22] <- "T_across"
+  colnames(fishes)[25] <- "T_across"
 
 # get within species temperature difference (obs - average per species)
   fishes$T_within <- fishes$Temperature - fishes$T_across
@@ -54,16 +54,16 @@
   M1    <- lmer(LArate ~ T_within + T_across + (1 | Name) + (1|uniReg) ,data=fishes, REML=T) 
 
 # parameter estimation of difference between within and across species model  
-  M2   <- lmer(LArate ~  Temperature + T_across + (1 |Name) + (1|uniReg) ,data=fishes, REML=T) 
+  M1_contrast   <- lmer(LArate ~  Temperature + T_across + (1 |Name) + (1|uniReg) ,data=fishes, REML=T) 
 
 # parameter estimation of within-between species model with random slope per species 
 # convergence error (which did not happen in previous R version, used alternative optimizer)
-  M3   <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=T,
+  M2   <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=T,
              control = lmerControl(optimizer ="Nelder_Mead"))
 
 # compare random slope/intercept with random intercept
   M1_ML <- lmer(LArate ~ T_within + T_across + (1 | Name) + (1|uniReg) ,data=fishes, REML=F)
-  M3_ML <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=F)
+  M2_ML <- lmer(LArate ~  T_within + T_across + (1 + T_within |Name) + (1|uniReg) ,data=fishes, REML=F)
 
 # guild and Linf analysis of the across species effect
 # get across species length (average per species)
@@ -73,7 +73,7 @@
   length <- as.data.frame(length)
   length$meanLLinf <- log10(length$Linf)
   fishes <- cbind(fishes, length[match(fishes$Name,length$Name), c(3)])
-  colnames(fishes)[24] <- "across_LLinf"
+  colnames(fishes)[27] <- "across_LLinf"
   
   lmr1 <- lmer(LArate ~  T_within + T_across*grouping*across_LLinf + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) 
   lmr2 <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) 
@@ -81,11 +81,11 @@
   lmr4 <- lmer(LArate ~  T_within + T_across*grouping + across_LLinf  + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) 
   lmr5 <- lmer(LArate ~  T_within + T_across*across_LLinf + grouping  + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) 
   lmr6 <- lmer(LArate ~  T_within + grouping*across_LLinf + T_across  + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) 
-  lmr7 <- lmer(LArate ~  T_within + grouping + across_LLinf + T_across  + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) 
-  AIC(lmr1,lmr2,lmr3,lmr4,lmr5,lmr6,lmr7)
-  BIC(lmr1,lmr2,lmr3,lmr4,lmr5,lmr6,lmr7)
+  #lmr7 <- lmer(LArate ~  T_within + grouping + across_LLinf + T_across  + (1+T_within|Name) + (1|uniReg) ,data=fishes, REML=F) # gives error, given lmr6 outcome unlikely to be best model
+  AIC(lmr1,lmr2,lmr3,lmr4,lmr5,lmr6) # --> lmr2 most negative
+  BIC(lmr1,lmr2,lmr3,lmr4,lmr5,lmr6)
   
-  M5   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) + (1|uniReg), data=fishes, REML=T) 
+  M4   <- lmer(LArate ~  T_within + T_across*grouping + T_across*across_LLinf  + (1+T_within|Name) + (1|uniReg), data=fishes, REML=T) 
 
-  rm(list= ls()[!(ls() %in% c('M1','M2','M3','M1_ML','M3_ML','M5','fishes'))])
+  rm(list= ls()[!(ls() %in% c('M1','M1_contrast','M2','M1_ML','M2_ML','M4','fishes'))])
   

@@ -28,12 +28,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="PEL" & fishes$Linf >100])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="#74a9cf",lwd=2,lty=1)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
 # 100 cm elasmobranchs
@@ -42,12 +42,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="SHRAY" & fishes$Linf >100])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="black",lwd=2,lty=1)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
 # 100 cm demersal
@@ -56,12 +56,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="DEM" & fishes$Linf >100])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="#74a9cf",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
 # 100 cm deep-living
@@ -70,12 +70,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="DEEP" & fishes$Linf >100])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="black",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
   legend(0,log10(45), legend=c("pelagics", "demersals", "elasmobranchs","deep-living"),
@@ -101,12 +101,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="PEL" & fishes$Linf <30])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="#74a9cf",lwd=2,lty=1)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
 # 30 cm demersal
@@ -115,12 +115,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="DEM" & fishes$Linf <30])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="#74a9cf",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
 # 30 cm deep-living
@@ -129,12 +129,12 @@
   nbmax <- max(fishes$Temperature[fishes$grouping=="DEEP" & fishes$Linf <30])
   T_across <- c(nbmin,nbmax)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yn <- predict(M5, newdata = newdat, re.form = NA)
+  yn <- predict(M4, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="black",lwd=2,lty=5)
   
   T_across <- c(10,20)
   newdat <- data.frame(T_across,Name,T_within,uniReg,grouping,across_LLinf)
-  yq10 <- predict(M5, newdata = newdat, re.form = NA)
+  yq10 <- predict(M4, newdata = newdat, re.form = NA)
   10^(yq10[2])/10^(yq10[1])
   
   axis(1,c(0,15,30))

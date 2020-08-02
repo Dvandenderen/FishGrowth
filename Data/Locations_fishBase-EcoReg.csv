@@ -33,8 +33,10 @@ Bouleau River, Quebec;0;0
 Burnett and Maroochy River and Pumiceston Passage;0;0
 Cadiz, fish ponds;0;0
 California, tide pools;0;0
+Northeastern Pacific, the 1940s;0;0
 Cape fishing grounds (31°-35°S);0;0
 Cape stock;0;0
+Northern Primor’e;47;0
 Caspian Sea;0;0
 Central and lower part;0;0
 central and western North Pacific;0;0
@@ -662,8 +664,11 @@ Iskenderun Gulf;32;0
 Levantine Sea;32;0
 Magosa Bay, Northern Cyprus;32;0
 "Mediterranean: El-Arish ((34°12'36"" E, 31°15'00"" N) to El-Sallum ((25°08'42"" E, 31° 30' 00"" N)";32;0
+Northeastern coast;0;0
 off Alexandria;32;0
 off Karatas, eastern Mediterranean;32;0
+Aegean Sea, Ionian Sea and Libyan Sea (Eastern Mediterranean);31;34
+Buzzard Bay (41°30' N  70°46' W);41;0
 Southeast Mediterranean;32;33
 West of Alexandria;32;0
 Yumurtalic Bight (Iskenderum Bay);32;0
@@ -916,6 +921,7 @@ Western Louisiana;43;0
 Akgol-Paradeniz Lagoon;44;0
 Azov basin;44;0
 Azov Sea;44;0
+Northwestern part of the Black Sea;44;0
 Black Sea;44;0
 Black Sea & Eastern Mediterranean;44;31
 Black Sea and Sea of Maramara;44;31
@@ -1062,6 +1068,8 @@ Central Gulf of Alaska (SE Kodiak Island);54;0
 Gulf of Alaska;54;0
 Kodiak Island;54;0
 Western Gulf of Alaska;54;0
+Hecate Strait, British Columbia;55;0
+Georgia Strait, British Columbia;55;56
 British Columbia;55;0
 Extreme outer Queen Charlotte Sound;55;0
 Queen Charlotte Is. (west coast);55;0
@@ -1076,12 +1084,15 @@ Port Renfrew, British Columbia;57;0
 Vancouver;57;0
 Vancouver I. (west coast);57;0
 Washington and California;57;58
+Seal Beach, California;59;0
+Belmont-Newport, California 10 m;58;0
 between Baja California and Pt. Conception, CA;58;59
 central and northern California;58;0
 Central California;58;0
 central California;58;0
 Elkorn Slough (121°47'W, 36°48'N), California;58;0
 Malibu, California;58;59
+Northern California (Monterey);58;0
 Monterey Bay, California;58;0
 Northern California;58;0
 Occidental;58;0
@@ -1285,11 +1296,13 @@ Southern Negros Is.;127;0
 Sto. Tomas, La Union (Mar-Sept 1981);127;0
 Bunaken Marine Park, North Sulawesi;128;0
 Boso, Central region;129;130
+North-central Gulf of Mexico;43;0
 Timor Sea;132;141
 Western Caroline Islands;134;0
 Ysabel Passage;134;136
 Fairfax harbour;137;0
 Queensland, northern region;140;142
+Hervey Bay, Queensland;202;0
 Arafura Sea;141;0
 "Arafura Sea and Gulf of Carpentaria;  along Queensland to Iluka, NSW";141;0
 Arafura Sea and Timor Sea;141;0
@@ -1358,6 +1371,7 @@ Iquique;176;0
 Naska ridge & Sala y Gomez seamount (25°40'S, 85°27'S);176;0
 Naska ridge and Sala y Gomez seamount (25°40'S, 85°27'S;176;0
 Valparaiso;176;177
+Chile;177;178
 Central Chile;177;178
 Central Chile (39° 45' S) to Magellan Strait, Patagonia (53°30' S);178;188
 Central Chile (39°45' S) to Magellan Strait, Patagonia (53°30' S);178;188

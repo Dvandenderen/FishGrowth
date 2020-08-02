@@ -71,15 +71,15 @@
        yaxt="n",xaxt="n", xlab=TeX("Temperature ($^o$C)"),
        ylab="Growth coef. A", col="white")
   
-# get the within species prediction from M3 
-  randomeff <- ranef(M3)$Name
+# get the within species prediction from M2 
+  randomeff <- ranef(M2)$Name
   unifish <- rownames(randomeff)
   for (j in 1:771){
     dd <- subset(fishes,fishes$Name == unifish[j])
     T_within <- c(min(dd$T_within),max(dd$T_within))
     if (length(unique(T_within)) > 1){
       T_across <- rep(dd$T_across[1],2)
-      yn <- fixef(M3)[1] + randomeff[j,1] + fixef(M3)[3] * T_across + fixef(M3)[2]*T_within + randomeff[j,2] * T_within 
+      yn <- fixef(M2)[1] + randomeff[j,1] + fixef(M2)[3] * T_across + fixef(M2)[2]*T_within + randomeff[j,2] * T_within 
       Tall <- c(min(dd$Temperature),max(dd$Temperature))
       lines(yn~Tall,col="grey",lwd=1)
     }
@@ -94,17 +94,17 @@
   Tmet <- c(min(T_across),max(T_across))
   lines(ymet~Tmet, col="red", lwd=2,lty=1)  
   
-# get the across species prediction from M3
+# get the across species prediction from M2
   T_across <- seq(min(fishes$Temperature),max(fishes$Temperature),0.1)
   Name <- rep(NA,length(T_across))
   uniReg <- rep(NA, length(T_across))
   T_within <- rep(0,length(T_across))
   newdat <- data.frame(T_across,Name,T_within,uniReg)
-  yn <- predict(M3, newdata = newdat, re.form = NA)
+  yn <- predict(M2, newdata = newdat, re.form = NA)
   lines(yn~T_across,col="blue",lwd=2)
   
 # calculate the 95% confidence interval
-  pred <- bootMer(M3, function(x) predict(x, newdata = newdat, re.form = NA), nsim = 100)
+  pred <- bootMer(M2, function(x) predict(x, newdata = newdat, re.form = NA), nsim = 100)
   CI.lower = apply(pred$t, 2, function(x) as.numeric(quantile(x, probs=.025, na.rm=TRUE)))
   CI.upper = apply(pred$t, 2, function(x) as.numeric(quantile(x, probs=.975, na.rm=TRUE)))
   lines(CI.upper~T_across,lty=2,col="blue")

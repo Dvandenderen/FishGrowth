@@ -6,13 +6,13 @@
   library(latex2exp)
 
 # get random effect of ecoregion
-  reff <- ranef(M5)
+  reff <- ranef(M4)
   ecoreg <- reff$uniReg
   ecoreg$ecreg <- rownames(ecoreg)
   rownames(ecoreg) <- NULL
   
 # add Zoobio, zooprod, NPP and temperature
-  ecoreg<-cbind(ecoreg,fishes[match(ecoreg$ecreg,fishes$uniReg),c(11,12,16,18)])
+  ecoreg<-cbind(ecoreg,fishes[match(ecoreg$ecreg,fishes$uniReg),c(14,15,19,21)])
   
 # calculate number of observations and unique species observations per region
   newReg <- table(fishes$uniReg)
