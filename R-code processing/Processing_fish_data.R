@@ -2,7 +2,7 @@
 
 ### growth data FishBase downloaded on 27 April 2018 
 ####################################################
-  setwd("C:/Users/pdvd/Online for git/FishGrowth/Data")
+  setwd("C:/Users/danie/Online for git/FishGrowth/Data")
   load("Growthdata_Fishtot.Rdata")
 
 ### We classified fish following the functional group classification from the SeaAroundUs project
